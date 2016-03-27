@@ -2,7 +2,7 @@ api:
   host: "https://api.enginsight.com"
   port: ""
   cookie:
-    domain: ""
+    domain: ".enginsight.com"
 
 google_analytics:
   id: "UA-28041458-15"

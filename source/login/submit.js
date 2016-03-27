@@ -7,10 +7,14 @@ function getMetaContent(name) {
 function getCookie(cname) {
   var name = cname + '=';
   var ca = document.cookie.split(';');
-  for (var i = 0; i < ca.length; i++) {
+  for (var i = 0, l = ca.length; i < l; i++) {
     var c = ca[i];
-    while (c.charAt(0) == ' ') c = c.substring(1);
-    if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) === 0) {
+      return c.substring(name.length, c.length);
+    }
   }
   return '';
 }
@@ -22,25 +26,19 @@ function setCookie(cname, cvalue, exdays) {
   document.cookie = cname + '=' + cvalue + '; ' + expires + ';path=/;domain=' + getMetaContent('cookie-domain');
 }
 
-//if (getCookie('id') && getCookie('session')) {
-//  location = '/app/';
-//}
-
 function disableInputs() {
   document.getElementById('submit-button')
     .value = 'Please wait...';
-  /* ... */
 }
 
 function enableInputs() {
   document.getElementById('submit-button')
     .value = 'Sign in';
-  /* ... */
 }
 
 document
   .getElementById('login-form')
-  .addEventListener('submit', function(e) {
+  .addEventListener('submit', function (e) {
     e.preventDefault();
 
     disableInputs();
@@ -68,7 +66,7 @@ document
     var xhr = new XMLHttpRequest();
     xhr.open('POST', loginHost + '/account/login');
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-    xhr.onreadystatechange = function() {
+    xhr.onreadystatechange = function () {
       if (xhr.readyState === 4) {
         if (xhr.status === 200) {
           if (isJSON(xhr.responseText)) {
@@ -78,7 +76,7 @@ document
               setCookie('session', data.session, 7);
 
               var alreadyRedirected = false;
-              setInterval(function() {
+              setInterval(function () {
                 if (!alreadyRedirected && getCookie('id') && getCookie('session')) {
                   console.log(133);
                   alreadyRedirected = true;
