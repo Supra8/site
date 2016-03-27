@@ -48,16 +48,17 @@
         });
       }
 
+      var yMax = opts.max * 1024 || _.max(_.map(opts.data, function (row) {
+        return _.get(row, opts.prop)
+      }));
+
       if (opts.prop === "ram.used") {
         _.map(opts.data, function (data) {
           _.set(data, 'ram.cached', _.get(data, 'ram.cached') * 1024 + _.get(data, 'ram.used'));
           _.set(data, 'ram.buffers', _.get(data, 'ram.buffers') * 1024 + _.get(data, 'ram.cached'));
+          _.set(data, 'ram.free', yMax);
         });
       }
-
-      var yMax = opts.max * 1024 || _.max(_.map(opts.data, function (row) {
-        return _.get(row, opts.prop)
-      }));
 
       if (opts.type === 'percentage' && yMax < 3)
         yMax = 3;
@@ -104,6 +105,7 @@
       vis.append('svg:g').attr('class', 'y axis').attr('width', '20px').attr('transform', 'translate(0 ,0)').call(yAxis);
 
       if (opts.prop === "ram.used") {
+        vis.append('svg:path').attr('d', areaGen(opts.data, "ram.free")).attr('class', 'area free').attr('stroke-linejoin', 'round').on('mouseover', function () {});
         vis.append('svg:path').attr('d', areaGen(opts.data, "ram.buffers")).attr('class', 'area buffers').attr('stroke-linejoin', 'round').on('mouseover', function () {});
         vis.append('svg:path').attr('d', areaGen(opts.data, "ram.cached")).attr('class', 'area cached').attr('stroke-linejoin', 'round').on('mouseover', function () {});
         vis.append('svg:path').attr('d', areaGen(opts.data, opts.prop)).attr('class', 'area used').attr('stroke-linejoin', 'round').on('mouseover', function () {});
@@ -146,12 +148,10 @@
       fill: #e91e63;
     }
 
-    line-chart .area.cached {
-      fill: rgba(233, 30, 99, 0.25);
-    }
-
-    line-chart .area.buffers {
-      fill: rgba(233, 30, 99, 0.25);
+    line-chart .area.cached,
+    line-chart .area.buffers,
+    line-chart .area.free {
+      fill: rgba(233, 30, 99, 0.33);
     }
 
     line-chart .selected {
