@@ -8,12 +8,12 @@ App.Views = App.Views || {};
     }
 
     initialize(options) {
-      this.timespan = 1;
+      this.timespan = 6;
       this.type = 'mean';
       this.period = {
-        unit: 'days',
+        unit: 'hours',
         to: moment().unix(),
-        from: moment().subtract(this.timespan, 'days').unix()
+        from: moment().subtract(this.timespan, 'hours').unix()
       };
       $(window).scroll(this.scroll);
     }
@@ -47,9 +47,9 @@ App.Views = App.Views || {};
       event.preventDefault();
       this.timespan = parseInt($(event.currentTarget).attr('value'))
       this.period = {
-        unit: 'days',
+        unit: 'hours',
         to: moment().unix(),
-        from: moment().subtract(this.timespan, 'days').unix()
+        from: moment().subtract(this.timespan, 'hours').unix()
       };
       this.render();
     }
