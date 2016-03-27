@@ -23,7 +23,6 @@
     "octicons": "latest",
     "d3": "latest",
     "riot": "latest",
-    "material-design-icons": "^2.2.2",
-    "skeleton": "^2.0.4"
+    "material-design-icons": "latest"
   }
 }

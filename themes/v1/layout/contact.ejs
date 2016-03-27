@@ -1,3 +1,16 @@
 <div class="container">
-  <a href="mailto:hello@enginsight.com">hello@enginsight.com</a>
+  <a class="email" href="mailto:hello@enginsight.com">hello@enginsight.com</a>
+
+  <form class="contact-form" action="<%= config.api.host %><%= config.api.port !== '' ? ':' + config.api.port : '' %>/site/contact" method="post">
+    <label for="email">Ihre E-Mail Adresse</label>
+    <input type="text" name="email" value="" required>
+
+    <label for="title">Titel</label>
+    <input type="text" name="title" value="" required>
+
+    <label for="content">Ihre Nachricht an uns</label>
+    <textarea name="content" rows="10" required></textarea>
+
+    <input class="submit" type="submit" value="Nachricht versenden">
+  </form>
 </div>
