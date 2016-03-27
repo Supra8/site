@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="<%= __('language') %>">
+  <head>
+    <meta charset="utf-8">
+    <%- partial('_partial/fonts') %>
+    <%- partial('_partial/favicon') %>
+    <%- css('css/style.css') %>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="api-host" content="<%= config.api.host %><%= config.api.port !== '' ? ':' + config.api.port : '' %>">
+    <meta name="cookie-domain" content="<%= config.api.cookie.domain %>">
+
+    <% String.prototype.capitalizeFirstLetter = function() {  %>
+    <%   return this.charAt(0).toUpperCase() + this.slice(1); %>
+    <% } %>
+
+    <title><%= page.title !== 'index' ? config.title + ' ' + page.title.capitalizeFirstLetter() : config.title %> - <%= config.subtitle %></title>
+
+    <link rel="alternate" href="https://enginsight.com/" hreflang="x-default" />
+    <link rel="canonical" href="https://enginsight.com<%= page.title !== 'index' ? '/' + page.title + '/': '' %>">
+
+    <% if(page.title === 'login') { %>
+    <link rel="prefetch" href="/assets/css/app.min.css">
+    <link rel="prefetch" href="/assets/js/vendor.min.js">
+    <link rel="prefetch" href="/assets/js/app.min.js">
+    <% } %>
+  </head>

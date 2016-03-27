@@ -1,0 +1,82 @@
+api:
+  host: "https://api.enginsight.com"
+  port: ""
+  cookie:
+    domain: ""
+
+google_analytics:
+  id: "UA-28041458-15"
+
+# Site
+title: ENGINSIGHT
+subtitle: Data-Driven Monitoring
+description:
+author: Eric Range
+
+language: de
+root: /
+
+# hexo-all-minifier ###################
+html_minifier:
+  exclude:
+  removeComments: true
+  removeCommentsFromCDATA: true
+  removeCDATASectionsFromCDATA: true
+  collapseWhitespace: true
+  conservativeCollapse: true
+  preserveLineBreaks: true
+  collapseBooleanAttributes: true
+  removeRedundantAttributes: true
+  removeEmptyAttributes: true
+  removeIgnored: true
+  minifyJS: true
+  minifyCSS: true
+
+css_minifier:
+  enable: true
+
+js_minifier:
+  enable: true
+
+uglify:
+  exclude:
+#######################################
+
+image_minifier:
+  enable: true
+
+marked:
+  breaks: false
+
+url: https://enginsight.com
+
+# Directory
+source_dir: source
+public_dir: public
+i18n_dir: :lang
+skip_render:
+
+# Writing
+default_layout: page
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace:
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+theme: v1
+
+exclude_generators:
+- index

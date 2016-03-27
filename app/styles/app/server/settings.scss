@@ -1,0 +1,18 @@
+.app-view {
+  &.server-settings {
+    .settings-form {
+      background: #fff;
+      padding: 30px;
+      input[type="text"] {
+        border: solid 1px #ddd;
+        height: 40px;
+        padding: 0 10px;
+        width: 300px;
+      }
+      .save {
+        display: block;
+        margin-top: 30px;
+      }
+    }
+  }
+}

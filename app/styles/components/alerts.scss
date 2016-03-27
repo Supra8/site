@@ -1,0 +1,17 @@
+$infoColor: #23bfdb;
+
+.alert {
+    font-size: 14px;
+    border-radius: 3px;
+    &.alert-info {
+        background: lighten($infoColor, 30%);
+        padding: 10px 12px;
+        display: inline-block;
+        border: solid 2px $infoColor;
+        margin: 0 0 20px;
+    }
+    span {
+        padding-right: 10px;
+        color: darken($infoColor, 10%);
+    }
+}

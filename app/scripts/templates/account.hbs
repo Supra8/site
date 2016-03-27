@@ -1,0 +1,35 @@
+<div class="account app-view">
+  <h2>Persönliche Einstellungen</h2>
+  <h3>Kontaktdaten</h3>
+  <div class="input-group">
+    <div class="inputset">
+      <span class="title">Vorname</span>
+      <input class="app" type="text" value="<%- FirstName %>" />
+    </div>
+    <div class="inputset">
+      <span class="title">Nachname</span>
+      <input class="app" type="text" value="<%- Name %>" />
+    </div>
+    <div class="inputset">
+      <span class="title">E-Mail</span>
+      <input class="app" type="text" value="<%- Email %>" />
+    </div>
+  </div>
+
+  <h2>E-Mail Einstellungen</h2>
+  <div class="input-group">
+    <h3>Frequenz</h3>
+    <div class="inputset">
+      <input name="email-frequency" type="radio">
+      <label>Instant</label>
+    </div>
+    <div class="inputset">
+      <input name="email-frequency" type="radio">
+      <label>Zusammenfassung</label>
+      <select>
+        <option>Täglich</option>
+      </select>
+    </div>
+  </div>
+  <a href="/account" id="save-new-account-settings" class="button button-primary">Änderungen speichern</a>
+</div>

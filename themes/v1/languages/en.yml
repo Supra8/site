@@ -1,0 +1,24 @@
+search: Search
+
+language: 'en'
+
+navigation:
+  blog: 'Blog'
+  pricing: 'Pricing'
+  login: 'Sign In'
+  registration: 'Sign Up'
+  contact: 'Contact'
+
+documentation: 'Documentation'
+
+slogan: 'Your way to an autonomous IT infrastructure monitoring'
+
+index:
+  hero:
+    primary: 'Sign up for closed Alpha!'
+
+login:
+  title: 'Sign in to Enginsight'
+  login: 'Sign in'
+  password: 'Password'
+  email: 'E-Mail'

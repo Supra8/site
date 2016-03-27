@@ -1,0 +1,13 @@
+<div class="server-settings app-view">
+  <form class="settings-form" method="PUT">
+    <label for="name">Name</label>
+    <input type="text" name="name" value="<%= name %>">
+
+    <label for="description">Beschreibung</label>
+    <input type="text" name="description" value="<%= description %>">
+
+    <input type="submit" class="button button-primary save" value="Speichern">
+  </form>
+
+  <a class="button button-primary delete" href="#">Delete server</a>
+</div>

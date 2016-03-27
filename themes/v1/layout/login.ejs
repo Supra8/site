@@ -1,0 +1,17 @@
+<div class="login-container">
+  <div class="title"><%= __('login.title') %></div>
+  <form id="login-form" method="post">
+    <div class="field">
+      <label for="email"><%= __('login.email') %></label>
+      <input type="email" name="email">
+    </div>
+    <div class="field">
+      <label for="password"><%= __('login.password') %></label>
+      <input type="password" name="password">
+    </div>
+    <input type="submit" value="<%= __('login.login') %>" id="submit-button">
+  </form>
+
+  <div class="sign-up">New to Enginsight? Sign up <a href="/join/">here</a>.</div>
+</div>
+<script type="text/javascript" src="submit.js"></script>

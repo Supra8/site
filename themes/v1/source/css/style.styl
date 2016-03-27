@@ -1,0 +1,230 @@
+@import "nib"
+@import "_variables"
+@import "_util/mixin"
+@import "_util/grid"
+
+global-reset()
+
+html
+  font-size: 16px;
+
+body
+  -webkit-text-size-adjust: 100%;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  main
+    flex: 1;
+
+p
+  line-height: 1.5em;
+  &.lead
+    letter-spacing: -0.5px;
+    font-size: 1.5em;
+    font-weight: 300;
+    @media screen and (max-width: 960px)
+      font-size: 1.1em;
+      letter-spacing: 0px;
+
+  &.semi-lead
+    letter-spacing: -0.5px;
+    font-size: 1.4em;
+    font-weight: 300;
+
+a
+  text-decoration: none;
+  color: inherit;
+
+.container
+  width: 100%;
+  max-width: 960px;
+  position: relative;
+  margin: 0 auto;
+  height: inherit;
+  padding: 0px 15px;
+  clearfix();
+
+@import "_extend"
+@import "_partial/header"
+@import "_partial/login"
+@import "_partial/navigation"
+@import "_partial/footer"
+
+*
+  box-sizing: border-box;
+
+.line
+  height: 2px;
+  background: #eee;
+
+footer
+  font-size: .9em;
+  color: #999;
+  padding: 20px 0px;
+  border-top: solid 1px #ddd;
+  background: #eee;
+  li
+    float: left;
+    margin-right: 15px;
+    &:first-child
+      font-weight: 500;
+      text-transform: uppercase;
+
+.button
+  white-space: nowrap;
+  text-transform: uppercase;
+
+.section-title
+  font-size: 2.2em;
+  letter-spacing: -1px;
+  margin-bottom: 15px;
+  font-weight: 300;
+
+.index-page
+  main
+    .gain
+      padding: 50px 0px;
+      background: #eee;
+      .check
+        min-height: 40px;
+      p
+        padding-left: 40px;
+      svg
+        float: left;
+        position: relative;
+        top: 3px;
+    .hosting
+      text-align: center;
+      svg
+        margin-bottom: 15px;
+      .section-title
+        margin-bottom: 45px;
+      a
+        color: #e91e63;
+        font-weight: 500;
+        margin-top: 15px;
+        display: block;
+    .sign-up
+      padding: 30px 0px;
+      background: #eee;
+      .container
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      a
+        padding: 19px;
+        color: #fff;
+        background-color: #e91e63;
+        flex: 0;
+      p
+        flex: 1;
+        color: #999;
+        padding-left: 15px;
+    .about
+      margin-bottom: -100px;
+      @media screen and (max-width: 960px)
+        margin-bottom: -70px;
+      text-align: center;
+      font-weight: 300;
+      p
+        max-width: 800px;
+        color: #999;
+        margin: 0 auto;
+    .usp
+      text-align: center;
+      svg
+        margin-bottom: 15px;
+
+    section
+      padding: 100px 0;
+      @media screen and (max-width: 960px)
+        padding: 50px 0px;
+
+      &.hero
+        padding: 150px 0px;
+        @media screen and (max-width: 960px)
+          padding: 50px 0px;
+          text-align: center;
+
+      &.border-bottom
+        border-bottom: solid 2px #eee;
+      position: relative;
+      .container
+        z-index: 99
+
+.hero
+  width: 100%;
+  background: #222 url(/images/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0;
+  &::after
+    content: "";
+    z-index: 0;
+    background: rgba(0, 0, 0, 0.75);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  .button
+    padding: 19px;
+    color: #fff;
+    font-size: 1.1em;
+    display: inline-block;
+    background-color: rgba(0,0,0,0.3);
+    &.button-primary
+      background-color: #e91e63;
+
+  .center
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 1;
+    color: #222;
+
+  .title
+    text-transform: uppercase;
+    font-size: 4em;
+    letter-spacing: -1px;
+    color: #fff;
+    max-width: 400px;
+    @media screen and (max-width: 960px)
+      font-size: 2em;
+      max-width: 100%;
+
+  .description
+    margin: 15px 0px 20px 0px;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #eee;
+    text-transform: uppercase;
+
+.mute
+  color: #999;
+
+h4
+  font-weight: 500;
+  font-size: 1em;
+  margin-bottom: 15px;
+
+.columns
+  .column
+    padding: 0 15px;
+    @media screen and (max-width: 960px)
+      padding: 0;
+
+  .column-1-2
+    width: 50%;
+
+  .column-1-3
+    width: 33.3333%;
+
+  .column-1-2, .column-1-3
+    display: inline-block;
+    margin-right: -4px;
+    @media screen and (max-width: 960px)
+      display: block;
+      width: 100%;
+      margin-bottom: 15px;

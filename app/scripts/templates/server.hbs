@@ -1,0 +1,52 @@
+<div class="server app-view" id="server-<%= id %>">
+  <sub-navigation></sub-navigation>
+  <div class="header">
+    <div class="attributes clearfix">
+      <div name="Server" class="attribute name"><%= name %></div>
+      <div name="CPU" class="attribute cpu"><%= specs.cpu.logical %></div>
+      <div name="RAM" class="attribute ram"><%= (specs.ram / 1024).toFixed(1) %>GB</div>
+      <div name="SWAP" class="attribute swap"><%= (specs.swap / 1024).toFixed(1) %>GB</div>
+      <div name="OS" class="attribute os"><%= specs.os.humandReadable %></div>
+      <div name="Running since" class="attribute bt"><%= moment().diff(specs.os.bootTime, 'days') %> days</div>
+      <div class="actions">
+        <div class="title">Interactions</div>
+        <a class="alerts octicon octicon-radio-tower" href="/server/<%= id %>/alerts"></a>
+        <a class="settings octicon octicon-gear" href="/server/<%= id %>/settings"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="time-control">
+    <div class="type">
+      <div class="title">Statistic Type</div>
+      <a href="#" value="min" class="option <%= type === 'min' ? 'active' : ''%>">Min</a>
+      <a href="#" value="median" class="option <%= type === 'median' ? 'active' : ''%>">Med</a>
+      <a href="#" value="mean" class="option <%= type === 'mean' ? 'active' : ''%>">Mean</a>
+      <a href="#" value="max" class="option <%= type === 'max' ? 'active' : ''%>">Max</a>
+    </div>
+    <div class="granularity">
+      <div class="title">Granularity</div>
+      <div value="1" class="option">1 Min</div>
+      <div value="5" class="option">5 Min</div>
+      <div value="15" class="option">15 Min</div>
+    </div>
+    <div class="zoom">
+      <div class="title">Zoom</div>
+      <a href="#" value="1" class="option <%= timespan === 1 ? 'active' : ''%>">1 Day</a>
+      <a href="#" value="2" class="option <%= timespan === 2 ? 'active' : ''%>">2 Days</a>
+      <a href="#" value="7" class="option <%= timespan === 7 ? 'active' : ''%>">1 Week</a>
+      <a href="#" value="14" class="option <%= timespan === 14 ? 'active' : ''%>">2 Week</a>
+    </div>
+  </div>
+
+  <div class="graph-container">
+    <line-chart name="CPU" description="Utilization" prop="cpu-total" type="percentage"></line-chart>
+    <line-chart name="RAM" description="Utilization" unit="mb" prop="ram-used" max="<%= parseInt(specs.ram) %>"></line-chart>
+    <line-chart name="Network" description="Incoming" prop="net-received"></line-chart>
+    <line-chart name="Network" description="Outgoing" prop="net-transmitted"></line-chart>
+    <line-chart name="Festplatte" description="Writes" prop="disk-writes"></line-chart>
+    <line-chart name="Festplatte" description="Reads" prop="disk-reads"></line-chart>
+    <line-chart name="SWAP" description="Utilization" prop="swap" unit="mb"></line-chart>
+    <line-chart name="Connections" description="All protocols" type="number" prop="net-connections-all"></line-chart>
+  </div>
+</div>

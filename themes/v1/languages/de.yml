@@ -1,0 +1,24 @@
+search: Suche
+
+language: 'de'
+
+navigation:
+  blog: 'Blog'
+  pricing: 'Preise'
+  login: 'Anmelden'
+  registration: 'Registrieren'
+  contact: 'Kontakt'
+
+documentation: 'Dokumentation'
+
+slogan: 'Your way to an autonomous IT infrastructure monitoring'
+
+index:
+  hero:
+    primary: 'Closed Beta Registrierung'
+
+login:
+  title: 'Sign in to Enginsight'
+  login: 'Anmelden'
+  password: 'Passwort'
+  email: 'E-Mail'

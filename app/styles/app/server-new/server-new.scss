@@ -1,0 +1,17 @@
+.app-view {
+  &.server-new {
+    padding: 30px;
+    form {
+      width: 400px;
+      input,
+      select,
+      button {
+        display: block;
+        margin-bottom: 5px;
+      }
+      input {
+        width: 100%;
+      }
+    }
+  }
+}

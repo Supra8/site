@@ -1,0 +1,25 @@
+<% if(page.title === 'app') { %>
+  <%- partial('_partial/head-app') %>
+  <body>
+    <%- body %>
+  </body>
+  </html>
+
+<% } else { %>
+  <% if(!page.head) { %>
+  <%- partial('_partial/head') %>
+  <body class="<%= page.title %>-page">
+  <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
+  <main role="main"><%- body %></main>
+  <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+
+  <% } else { %>
+  <%- partial('_partial/' + page.head) %>
+  <body><%- body %>
+
+  <% } %>
+
+  <%- partial('_partial/google-analytics') %>
+  </body>
+  </html>
+<% } %>

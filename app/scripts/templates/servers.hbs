@@ -1,0 +1,36 @@
+<div class="servers app-view">
+
+  <div class="title clearfix">
+    <span>Servers</span>
+  </div>
+
+  <div class="servers-table">
+    <div class="separator"></div>
+    <div class="view">
+      <div class="actions">
+        <a href="/server/new" class="add button"><i class="material-icons">add</i>Add server</a>
+        <a href="/server/new" class="add button" style="
+    background: #fff;
+    color: #e91e63;
+    border: solid 3px;
+    margin-left: 3px;
+"><i class="material-icons">add</i>Add Dependency</a>
+      </div>
+      <span class="title">View</span>
+      <span class="property active">List</span>
+      <span class="property">Topology</span>
+    </div>
+    <div class="separator"></div>
+    <table>
+      <thead>
+        <th>Host<span style="color: #999;margin-left: 5px;">(Fully Qualified Domain Name)</span></th>
+        <th></th>
+        <th>Operating system</th>
+        <th>Last feedback</th>
+        <th>Version</th>
+        <th><!-- Actions --></th>
+      </thead>
+      <tbody class="servers-container"></tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+.pie-chart {
+    position: relative;
+    canvas {
+        position: absolute;
+        left: 0;
+        top: 15px;
+        width: 100%;
+        height: 100%;
+    }
+}

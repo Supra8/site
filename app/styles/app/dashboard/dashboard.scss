@@ -1,0 +1,17 @@
+.app-view {
+  &.dashboard {
+      padding: 15px;
+      .list {
+        background: #fff;
+        padding: 15px 25px;
+        border-radius: 3px;
+        .id {
+          color: #999;
+        }
+
+        .subtitle {
+          font-weight: bold;
+        }
+      }
+  }
+}
