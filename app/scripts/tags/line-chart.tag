@@ -184,8 +184,8 @@
       font-size: 0.85em;
     }
     line-chart svg .axis text {
-      font-size: 10px;
-      fill: #222;
+      font-size: 11px;
+      fill: #333;
     }
 
     line-chart svg .y.axis text {
