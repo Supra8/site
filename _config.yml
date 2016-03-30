@@ -4,9 +4,6 @@ api:
   cookie:
     domain: ".enginsight.com"
 
-google_analytics:
-  id: "UA-28041458-15"
-
 # Site
 title: ENGINSIGHT
 subtitle: Data-Driven Monitoring
