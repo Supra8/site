@@ -10,7 +10,7 @@
   <%- partial('_partial/head') %>
   <body class="<%= page.title %>-page">
   <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
-  <main role="main"><%- body %></main>
+  <main><%- body %></main>
   <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
 
   <% } else { %>

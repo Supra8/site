@@ -1,11 +1,27 @@
-<footer role="contentinfo">
+<footer class="footer">
+  <div class="sign-up">
+    <div class="container">
+      <a href="/" class="button button-primary">
+        <%= __('index.hero.primary') %>
+      </a>
+      <p class="lead">Gleich heute kostenlos registrieren und Risiko reduzieren.</p>
+    </div>
+  </div>
   <nav class="container">
     <ul>
       <li><a href="/">Enginsight</a></li>
-      <li><a href="/contact/"><%- __('navigation.contact') %></a></li>
+      <li>
+        <a href="/contact/">
+          <%- __('navigation.contact') %>
+        </a>
+      </li>
       <li><a href="//blog.enginsight.com">Blog</a></li>
       <li><a href="/">Impressum</a></li>
-      <li><a href="/login/"><%- __('navigation.login') %></a></li>
+      <li>
+        <a href="/login/">
+          <%- __('navigation.login') %>
+        </a>
+      </li>
     </ul>
   </nav>
 </footer>
