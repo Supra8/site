@@ -202,28 +202,6 @@ module.exports = function(grunt) {
         }]
       }
     },
-    aws: grunt.file.readJSON('aws-keys.json'),
-    aws_s3: {
-      options: {
-        accessKeyId: '<%= aws.AWSAccessKeyId %>',
-        secretAccessKey: '<%= aws.AWSSecretKey %>',
-        region: 'eu-central-1',
-        uploadConcurrency: 5,
-        downloadConcurrency: 5
-      },
-      staging: {
-        options: {
-          bucket: 'awo-site-frankfurt',
-          differential: true
-        },
-        files: [{
-          expand: true,
-          cwd: 'public/',
-          src: ['**'],
-          dest: '/'
-        }]
-      }
-    },
     hexo: {
       clean: {
         options: {
@@ -251,16 +229,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-riot');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-compress');
-  grunt.loadNpmTasks('grunt-aws-s3');
   grunt.loadNpmTasks('grunt-hexo');
 
   grunt.registerTask('build', ['sass', 'autoprefixer', 'cssmin', 'jst', 'riot', 'concat', 'babel', 'uglify', 'copy']);
   grunt.registerTask('buildIncr', ['sass', 'autoprefixer', 'cssmin', 'jst', 'riot', 'concat', 'babel', 'uglify:app', 'copy']);
 
   grunt.registerTask('html', ['htmlmin', 'compress']);
-
-  grunt.registerTask('deploy', [/*'hexo:clean', 'hexo:generate', */'htmlmin', 'build', 'aws_s3']);
-  grunt.registerTask('deployIncr', ['hexo:clean', 'hexo:generate', 'htmlmin', 'buildIncr', 'aws_s3']);
 
   grunt.registerTask('default', ['jst']);
 };
