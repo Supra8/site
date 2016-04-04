@@ -76,7 +76,7 @@ App.Models = App.Models || {};
         response.specs.swap = response.specs.swap || 0;
         response.specs.os.bootTime =
           response.specs.os.bootTime !== 0 ?
-          new Date(response.specs.os.bootTime * 1000) :
+          new Date(response.specs.os.bootTime) :
           null;
 
         response.lastFeedback = response.lastFeedback || new Date(0);

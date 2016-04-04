@@ -7,7 +7,9 @@
       <div name="RAM" class="attribute ram"><%= (specs.ram / 1024).toFixed(1) %>GB</div>
       <div name="SWAP" class="attribute swap"><%= (specs.swap / 1024).toFixed(1) %>GB</div>
       <div name="OS" class="attribute os"><%= specs.os.humandReadable %></div>
-      <div name="Running since" class="attribute bt"><%= moment().diff(specs.os.bootTime, 'days') %> days</div>
+
+      <% var bt = moment().diff(specs.os.bootTime, 'days') + ' days' %>
+      <div name="Running since" class="attribute bt"><%= bt > 0 ? bt : moment().diff(specs.os.bootTime, 'hours') + ' hours' %></div>
       <div class="actions">
         <div class="title">Interactions</div>
         <a class="alerts octicon octicon-radio-tower" href="/server/<%= id %>/alerts"></a>

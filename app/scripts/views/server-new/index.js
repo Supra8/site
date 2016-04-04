@@ -18,12 +18,15 @@ App.Views = App.Views || {};
 
     submit: function(event) {
       event.preventDefault();
+      let that = this;
       $.post(`${API_URL}/server`, {
         name: event.target.name.value,
         description: event.target.description.value
       }, (data) => {
-      	/* use curl if yum */
-        $('.server-new.app-view').text(`wget -O - https://raw.githubusercontent.com/awo-io/m8/master/scripts/awo-m8_linux.install | bash -s ${data._id} ${data.keys.symmetric}`);
+        let $publicKey = $('<code class="public-key" />').appendTo(that.$('.server-new.app-view').empty());
+        $publicKey.html(`${data.keys.public.replace(/(?:\r\n|\r|\n)/g, '<br />')}`);
+
+        //$('.server-new.app-view').text(`wget -O - https://raw.githubusercontent.com/awo-io/m8/master/scripts/awo-m8_linux.install | bash -s ${data._id} ${data.keys.symmetric}`);
       });
     },
 
@@ -33,7 +36,7 @@ App.Views = App.Views || {};
 
     render: function() {
       this.$el.html(this.template());
-
+      return this;
     }
   });
 })();
