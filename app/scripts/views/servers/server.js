@@ -41,7 +41,7 @@ App.Views = App.Views || {};
 
     render() {
       this.$el.html(this.template(_.extend(this.model.toJSON(), {
-        latest: '0.0.8'
+        latest: '0.1.0'
       })));
       return this;
     }

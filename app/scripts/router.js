@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
   "use strict";
 
   const el = $('#app-view');
@@ -6,7 +6,7 @@ $(function() {
     el
   };
 
-  Backbone.View.prototype.dispose = function() {
+  Backbone.View.prototype.dispose = function () {
     this.undelegateEvents();
     this.stopListening();
     this.unbind();
@@ -17,7 +17,7 @@ $(function() {
     }
   };
 
-  Backbone.History.prototype.navigate = _.wrap(Backbone.History.prototype.navigate, function() {
+  Backbone.History.prototype.navigate = _.wrap(Backbone.History.prototype.navigate, function () {
     let args = _.toArray(arguments);
     Backbone.history.trigger('url-changing', args);
     let res = args.shift().apply(this, args);
@@ -29,7 +29,7 @@ $(function() {
 
     tmpView: null,
 
-    initialize: function() {
+    initialize: function () {
       this.bind('route', () => {
         if (window.ga) {
           let path = Backbone.history.getFragment();
@@ -42,7 +42,7 @@ $(function() {
     },
 
     routes: {
-      '': function() {
+      '': function () {
         router.navigate('//servers', {
           trigger: true
         });
@@ -57,22 +57,22 @@ $(function() {
         this.tmpView.render();
       },*/
 
-      'settings': function() {
+      'settings': function () {
         this.tmpView = new App.Views.Settings(params);
         this.tmpView.render();
       },
 
-      'servers': function() {
+      'servers': function () {
         this.tmpView = new App.Views.Servers(params);
         this.tmpView.render();
       },
 
-      'server/new': function() {
+      'server/new': function () {
         this.tmpView = new App.Views.ServerNew(params);
         this.tmpView.render();
       },
 
-      'server/:id([a-f0-9]+)': function(id) {
+      'server/:id([a-f0-9]+)': function (id) {
         let model = new App.Models.Server({
           id
         });
@@ -81,7 +81,7 @@ $(function() {
         }));
         this.tmpView.render();
       },
-      'server/:id([a-f0-9]+)/about': function(id) {
+      'server/:id([a-f0-9]+)/about': function (id) {
         let model = new App.Models.Server({
           id
         });
@@ -90,7 +90,7 @@ $(function() {
         }));
         this.tmpView.render();
       },
-      'server/:id([a-f0-9]+)/alerts': function(id) {
+      'server/:id([a-f0-9]+)/alerts': function (id) {
         let model = new App.Models.Server({
           id
         });
@@ -99,7 +99,7 @@ $(function() {
         }));
         this.tmpView.render();
       },
-      'server/:id([a-f0-9]+)/settings': function(id) {
+      'server/:id([a-f0-9]+)/settings': function (id) {
         let model = new App.Models.Server({
           id
         });
@@ -109,13 +109,13 @@ $(function() {
         this.tmpView.render();
       },
 
-      'users': function(id) {
+      'users': function (id) {
         this.tmpView = new App.Views.Users(params);
         this.tmpView.render();
       },
 
       /* If there is no route matching, just navigate back. */
-      '*path': function() {
+      '*path': function () {
         alert("Route not found!");
         Backbone.history.history.back();
       }
@@ -123,17 +123,16 @@ $(function() {
   });
 
   var router = new App.Router();
-  Backbone.history.bind('url-changing', function(path, e) {
+  Backbone.history.bind('url-changing', function (path, e) {
     if (router.tmpView && _.isFunction(router.tmpView.unbind)) {
       router.tmpView.dispose();
     }
   });
 
-  Backbone.history.bind('url-changed', function(path, e) {});
+  Backbone.history.bind('url-changed', function (path, e) {});
 
   Backbone.history.start({
-    //pushState: true,
-    root: '/app/'
+    root: `/${document.documentElement.lang}/app/`
   });
 
   /* http://artsy.github.io/blog/2012/06/25/replacing-hashbang-routes-with-pushstate/ */

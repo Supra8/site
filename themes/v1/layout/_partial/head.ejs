@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <%- partial('_partial/fonts') %>
     <%- partial('_partial/favicon') %>
-    <%- css('css/style.css') %>
+    <%- css('https://assets.enginsight.com/css/style.css') %>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
@@ -18,7 +18,7 @@
 
     <title><%= page.title !== 'index' ? config.title + ' ' + page.title.capitalizeFirstLetter() : config.title %> - <%= config.subtitle %></title>
 
-    <link rel="alternate" href="https://enginsight.com/" hreflang="x-default" />
+    <link rel="alternate" href="https://enginsight.com/de/" hreflang="de" />
     <link rel="canonical" href="https://enginsight.com<%= page.title !== 'index' ? '/' + page.title + '/': '' %>">
 
     <% if(page.title === 'login') { %>

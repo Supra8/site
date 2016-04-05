@@ -78,9 +78,8 @@ document
               var alreadyRedirected = false;
               setInterval(function () {
                 if (!alreadyRedirected && getCookie('id') && getCookie('session')) {
-                  console.log(133);
                   alreadyRedirected = true;
-                  location = '/app/';
+                  location = '/' + document.documentElement.lang + '/app/';
                 }
               }, 100);
             }
