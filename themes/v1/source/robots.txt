@@ -1,9 +1,6 @@
 User-agent: *
 
-Disallow: /app/
-Disallow: /assets/
 Disallow: /images/
 Disallow: /fonts/
 Disallow: /css/
-
-Sitemap: https://innv.io/sitemap.xml
+Disallow: /js/
