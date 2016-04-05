@@ -1,4 +1,0 @@
----
-title: docs
-layout: docs
----
