@@ -132,7 +132,7 @@ $(function () {
   Backbone.history.bind('url-changed', function (path, e) {});
 
   Backbone.history.start({
-    root: `/${document.documentElement.lang}/app/`
+    root: `${location.pathname}`
   });
 
   /* http://artsy.github.io/blog/2012/06/25/replacing-hashbang-routes-with-pushstate/ */

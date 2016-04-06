@@ -11,9 +11,9 @@
       <% var bt = moment().diff(specs.os.bootTime, 'days') %>
       <div name="Running since" class="attribute bt"><%= bt > 0 ? bt + ' days' : moment().diff(specs.os.bootTime, 'hours') + ' hours' %></div>
       <div class="actions">
-        <div class="title">Interactions</div>
-        <a class="alerts octicon octicon-radio-tower" href="/server/<%= id %>/alerts"></a>
-        <a class="settings octicon octicon-gear" href="/server/<%= id %>/settings"></a>
+        <!--<div class="title">Interactions</div>-->
+        <a class="alerts" href="/server/<%= id %>/alerts"><i class="material-icons">notifications</i></a>
+        <a class="settings" href="/server/<%= id %>/settings"><i class="material-icons">settings</i></a>
       </div>
     </div>
   </div>
