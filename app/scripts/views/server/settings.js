@@ -40,7 +40,7 @@ App.Views = App.Views || {};
     delete: function (event) {
       event.preventDefault();
       this.model.destroy().then((data) => {
-        location = '/app#servers';
+        location = `${location.pathname}#/servers`;
       });
     }
 

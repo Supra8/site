@@ -24,9 +24,17 @@ App.Views = App.Views || {};
         description: event.target.description.value
       }, (data) => {
         let $publicKey = $('<code class="public-key" />').appendTo(that.$('.server-new.app-view').empty());
-        $publicKey.html(`${data.keys.public.replace(/(?:\r\n|\r|\n)/g, '<br />')}`);
+        //$publicKey.html(`${data.keys.public.replace(/(?:\r\n|\r|\n)/g, '<br />')}`);
 
-        //$('.server-new.app-view').text(`wget -O - https://raw.githubusercontent.com/awo-io/m8/master/scripts/awo-m8_linux.install | bash -s ${data._id} ${data.keys.symmetric}`);
+        $publicKey.html(`\
+server:                                                               <br>\
+  adress: 94.186.181.124                                              <br>\
+  port: 9150                                                          <br>\
+                                                                      <br>\
+client:                                                               <br>\
+  id: ${data._id}<br>\
+  key: !!str | <br>\
+    ${data.keys.public.replace(/(?:\r\n|\r|\n)/g, '<br />    ')}`);
       });
     },
 
