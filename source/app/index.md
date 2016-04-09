@@ -33,7 +33,7 @@ title: app
   <a href="/contact/">Contact</a>
 </div>
 
-<script src="https://assets.enginsight.com/app/js/vendor.min.js" type="text/javascript"></script>
+<script src="/assets/js/vendor.min.js" type="text/javascript"></script>
 <script>
   const API_URL = document.querySelector('meta[name="api-host"]').getAttribute('content');
 

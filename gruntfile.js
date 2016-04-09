@@ -24,7 +24,8 @@ module.exports = function(grunt) {
             'bower_components/backbone/backbone.js',
             'bower_components/moment/min/moment-with-locales.min.js',
             'bower_components/riot/riot+compiler.min.js',
-            'bower_components/d3/d3.min.js'
+            'bower_components/d3/d3.min.js',
+            'bower_components/c3/c3.min.js'
           ]
         }
       },
@@ -104,6 +105,7 @@ module.exports = function(grunt) {
         files: {
           'public/assets/css/app.min.css': [
             'bower_components/normalize.css/normalize.css',
+            'bower_components/c3/c3.min.css',
             'public/assets/css/app.css'
           ]
         }
