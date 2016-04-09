@@ -38,11 +38,25 @@ App.Views = App.Views || {};
       this.fetch().then((models) => {
         let tickets = models.tickets;
         this.$el.html(this.template(models));
-        tickets.where({resolved: false}).forEach((ticket) => {
+        tickets.where({
+          resolved: false
+        }).forEach((ticket) => {
           let ticketHTML = (new App.Views.Dashboard__Ticket({
             model: ticket
           })).render().el;
           $('.tickets .open-list', that.$el).append(ticketHTML);
+        });
+        let data = _.map(tickets.models, (ticket) => ticket.attributes);
+        let group = _.groupBy(data, function(ticket) {
+          return (new Date(ticket.createdAt)).toLocaleDateString();
+        });
+        riot.mount('stacked-bar-chart', {
+          data: _.map(_.keys(group), function(key) {
+            return {
+              date: new Date(group[key][0].createdAt) * 1,
+              value: group[key].length
+            };
+          })
         });
       });
     }
