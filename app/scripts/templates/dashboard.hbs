@@ -1,1 +1,31 @@
-<div class="dashboard app-view"></div>
+<div class="dashboard app-view">
+
+  <div class="servers">
+    <div class="flex-left">
+      <a href="/servers" class="title">Servers</a>
+      <div class="big critical">0</div>
+      <div class="all">
+        <%= servers.length %>
+      </div>
+    </div>
+    <div class="flex-right">
+      <div class="critical-list"></div>
+    </div>
+  </div>
+
+  <div class="tickets">
+    <div class="flex-left">
+      <div class="title">Tickets</div>
+      <div class="big open">
+        <%= tickets.where({resolved: false}).length %>
+      </div>
+      <div class="all">
+        <%= tickets.length %>
+      </div>
+    </div>
+    <div class="flex-right">
+      <div class="open-list"></div>
+    </div>
+  </div>
+
+</div>

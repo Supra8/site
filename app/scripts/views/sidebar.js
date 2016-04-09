@@ -12,7 +12,7 @@ App.Views = App.Views || {};
 
     render: function () {
       let that = this;
-      let servers = new App.Collections.Server();
+      let servers = new App.Collections.Servers();
       servers.fetch().then(() => {
         servers.forEach((server) => {
           $.get(`${API_URL}/server/${server.id}/metrics/latest/1`, (data) => {

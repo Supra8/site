@@ -24,7 +24,7 @@ App.Views = App.Views || {};
 
     renderServers() {
       let that = this;
-      let servers = new App.Collections.Server();
+      let servers = new App.Collections.Servers();
       servers.fetch().then(() => {
         $('.servers .servers-container', that.$el).empty();
         servers.each((server) => {

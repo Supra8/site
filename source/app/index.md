@@ -44,6 +44,6 @@ title: app
     }
   });
 </script>
-<script src="https://assets.enginsight.com/app/js/tags.min.js" type="text/javascript"></script>
-<script src="https://assets.enginsight.com/app/js/templates.min.js" type="text/javascript"></script>
-<script src="https://assets.enginsight.com/app/js/app.min.js" type="text/javascript"></script>
+<script src="/assets/js/tags.min.js" type="text/javascript"></script>
+<script src="/assets/js/templates.min.js" type="text/javascript"></script>
+<script src="/assets/js/app.min.js" type="text/javascript"></script>

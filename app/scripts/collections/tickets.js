@@ -5,10 +5,10 @@ App.Collections = App.Collections || {};
 (function () {
     'use strict';
 
-    App.Collections.Servers = Backbone.Collection.extend({
+    App.Collections.Tickets = Backbone.Collection.extend({
 
-        url: API_URL + "/server",
-        model: App.Models.Server,
+        url: API_URL + "/ticket",
+        model: App.Models.Ticket,
 
         parse: function(response, options) {
           return response;

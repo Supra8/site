@@ -11,7 +11,7 @@ description:
 author: Eric Range
 
 language: de
-root: /de/
+root: /
 
 # hexo-all-minifier ###################
 html_minifier:
