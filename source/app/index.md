@@ -19,7 +19,7 @@ title: app
 </div>
 
 <div class="navigation">
-  <a class="item active" href="/"><i class="material-icons">graphic_eq</i></a>
+  <a class="item" href="/"><i class="material-icons">graphic_eq</i></a>
   <a class="item" href="/servers"><i class="material-icons">desktop_windows</i></a>
   <!--<a class="item octicon octicon-radio-tower">Activites</a>-->
   <a class="item" href="/users"><i class="material-icons">accessibility</i></a>
