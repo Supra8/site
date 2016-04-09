@@ -43,10 +43,10 @@ $(function() {
 
     routes: {
       '': function() {
-        //router.navigate('//servers', {
-        //  trigger: true
-        //});
-        //return true;
+        router.navigate('//servers', {
+          trigger: true
+        });
+        return true;
 
         this.tmpView = new App.Views.Dashboard(params);
         this.tmpView.render();
