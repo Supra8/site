@@ -71,16 +71,26 @@ App.Views = App.Views || {};
           type: that.type
         })));
 
-        riot.mount('sub-navigation', {
-          model: that.model,
-          submenu: App.Views.Server.submenu
-        });
-
         metrics.fetch().then((data) => {
-          let timeSeries = _.map(data, 'unix');
+          let dataset = {};
+          _.map(data, function(row) {
+            Object.keys(row).forEach((key) => {
+              if (!_.isArray(dataset[key])) {
+                dataset[key] = [];
+                if (key === 'unix') {
+                  dataset.unix.push('x');
+                }
+              }
+              if (_.isNumber(row[key]) || _.isObject(row[key])) {
+                dataset[key].push(row[key]);
+              } else {
+                dataset[key].push(0);
+              }
+            });
+          });
+
           riot.mount('line-chart', {
-            data,
-            timeSeries
+            dataset
           });
         });
       });

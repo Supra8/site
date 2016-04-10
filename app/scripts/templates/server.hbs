@@ -42,13 +42,13 @@
   </div>
 
   <div class="graph-container">
-    <line-chart name="CPU" description="Utilization" prop="cpu-total" type="percentage"></line-chart>
-    <line-chart name="RAM" description="Utilization" unit="mb" prop="ram-used" max="<%= parseInt(specs.ram) %>"></line-chart>
-    <line-chart name="Network" description="Incoming" prop="net-received"></line-chart>
-    <line-chart name="Network" description="Outgoing" prop="net-transmitted"></line-chart>
-    <line-chart name="Festplatte" description="Writes" prop="disk-writes"></line-chart>
-    <line-chart name="Festplatte" description="Reads" prop="disk-reads"></line-chart>
-    <line-chart name="SWAP" description="Utilization" prop="swap" unit="mb"></line-chart>
-    <line-chart name="Connections" description="All protocols" type="number" prop="net-connections-all"></line-chart>
+    <line-chart name="CPU" description="Utilization" unit="%" prop="cpu-total"></line-chart>
+    <line-chart name="RAM" description="Utilization" groups="ram.used,ram.cached,ram.buffers" unit="b" prop="ram-used" type="area" max="<%= specs.ram %>"></line-chart>
+    <line-chart name="Network" description="Incoming" unit="b" prop="net-received"></line-chart>
+    <line-chart name="Network" description="Outgoing" unit="b" prop="net-transmitted"></line-chart>
+    <line-chart name="Festplatte" description="Writes" unit="b" prop="disk-writes"></line-chart>
+    <line-chart name="Festplatte" description="Reads" unit="b" prop="disk-reads"></line-chart>
+    <line-chart name="SWAP" description="Utilization" prop="swap" unit="b" max="<%= specs.swap %>"></line-chart>
+    <line-chart name="Connections" description="All protocols" prop="net-connections-all"></line-chart>
   </div>
 </div>
