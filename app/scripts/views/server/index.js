@@ -89,7 +89,7 @@ App.Views = App.Views || {};
             });
           });
 
-          riot.mount('line-chart', {
+          this.charts = riot.mount('line-chart', {
             dataset
           });
         });

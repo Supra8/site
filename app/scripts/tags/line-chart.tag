@@ -3,7 +3,7 @@
     <div class="title">{opts.name}</div>
     <div class="description">{opts.description}</div>
   </div>
-  <div id="line-chart-{opts.prop}"></div>
+  <div id="line-chart-{opts.cs}"></div>
   <script>
     var yFormatNumber = function (value) {
       return Math.round(value);
@@ -18,52 +18,48 @@
       }
       var units = ['KB', 'MB', 'GB', 'TB'];
       var index = 0;
-      while (+ value > 99) {
+      while ( + value > 99) {
         value /= 1024;
         index++;
       }
       return d3.format('.1f')(value) + units[index];
     }
 
-    var prop = opts.prop.replace(new RegExp('-', 'g'), '.');
+    var lines = [opts.dataset.unix];
     var dataset = opts.dataset;
     var values = [];
+    var splits = null,
+      selector = null;
 
-    var splits = prop.split('.');
-    var selector = _.drop(splits, 1).join('.');
+    var props = opts.prop.split(',');
+    props.forEach(function (prop) {
+      prop = prop.replace(new RegExp('-', 'g'), '.');
+      values = [];
 
-    yMax = parseInt(opts.max);
+      splits = prop.split('.');
+      selector = _.drop(splits, 1).join('.');
 
-    values.push(prop);
-    _.map(dataset[splits[0]], function (data) {
-      splits.length > 1
-        ? values.push(_.get(data, selector))
-        : values.push(data);
-    });
+      yMax = parseInt(opts.max);
 
-    var lines = [opts.dataset.unix, values];
-
-    var buffers = [];
-    var cached = [];
-    if (opts.prop === 'ram-used') {
-      cached.push('ram.cached');
-      buffers.push('ram.buffers');
-      _.map(dataset.ram, function (data) {
-        cached.push(data.cached);
-        buffers.push(data.buffers);
+      values.push(prop);
+      _.map(dataset[splits[0]], function (data) {
+        splits.length > 1
+          ? values.push(_.get(data, selector))
+          : values.push(data);
       });
-      lines.push(cached);
-      lines.push(buffers);
-    }
+
+      lines.push(values);
+    });
 
     var groups = [];
     if (opts.groups) {
       groups = [opts.groups.split(',')];
     }
 
+    var chart = null;
     this.on('mount', function () {
-      var chart = c3.generate({
-        bindto: '#line-chart-' + opts.prop,
+      chart = c3.generate({
+        bindto: '#line-chart-' + opts.cs,
         padding: {
           left: 45
         },
@@ -74,18 +70,10 @@
           type: opts.type || '',
           groups: groups,
           x: 'x',
-          columns: lines,
-          colors: {
-            'ram.cached': '#9C27B0',
-            'ram.buffers': '#3F51B5'
-          },
-          color: function (color, d) {
-            if (color === '#9C27B0' || color === '#3F51B5') {
-              return color;
-            } else {
-              return '#e91e63';
-            }
-          }
+          columns: lines
+        },
+        color: {
+          pattern: ['#e91e63', '#9C27B0', '#3F51B5']
         },
         bar: {
           width: 3
@@ -104,13 +92,7 @@
             tick: {
               count: 5,
               format: function (value) {
-                if (opts.unit === 'b') {
-                  return yFormatByte(value);
-                } else if (opts.unit === '%') {
-                  return yFormatPercentage(value);
-                } else {
-                  return yFormatNumber(value);
-                }
+                if (opts.unit === 'b') {return yFormatByte(value);} else if (opts.unit === '%') {return yFormatPercentage(value);} else {return yFormatNumber(value);}
               }
             },
             padding: {
@@ -127,6 +109,9 @@
         }
       });
     });
+    this.on('unmount', function () {
+      chart = null;
+    });
   </script>
   <style>
     line-chart .c3-line {
@@ -134,11 +119,10 @@
       stroke-linejoin: round;
     }
     line-chart .c3-area {
-      opacity: 0.95!important;
+      opacity: 1!important;
     }
     line-chart text {
       fill: #444;
     }
-
   </style>
 </line-chart>
