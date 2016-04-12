@@ -13,7 +13,7 @@ App.Views = App.Views || {};
     className: '',
 
     events: {
-      "submit .server-new-form": "submit"
+      'submit .server-new-form': 'submit'
     },
 
     submit: function(event) {
@@ -22,10 +22,11 @@ App.Views = App.Views || {};
       $.post(`${API_URL}/server`, {
         name: event.target.name.value,
         description: event.target.description.value
-      }, (data) => {
-        let $publicKey = $('<code class="public-key" />').appendTo(that.$('.server-new.app-view').empty());
-        //$publicKey.html(`${data.keys.public.replace(/(?:\r\n|\r|\n)/g, '<br />')}`);
 
+      }, (data) => {
+        that.undelegateEvents();
+
+        let $publicKey = $('<code class="public-key" />').appendTo(that.$('.server-new.app-view').empty());
         $publicKey.html(`\
 server:                                                               <br>\
   adress: 94.186.181.124                                              <br>\
@@ -44,7 +45,6 @@ client:                                                               <br>\
 
     render: function() {
       this.$el.html(this.template());
-      return this;
     }
   });
 })();
