@@ -33,7 +33,7 @@ title: app
   <a href="/contact/">Contact</a>
 </div>
 
-<script src="/assets/js/vendor.min.js" type="text/javascript"></script>
+<script src="https://assets.enginsight.com/app/js/vendor.min.js" type="text/javascript"></script>
 <script>
   const API_URL = document.querySelector('meta[name="api-host"]').getAttribute('content');
 
@@ -44,6 +44,7 @@ title: app
     }
   });
 </script>
-<script src="/assets/js/tags.min.js" type="text/javascript"></script>
-<script src="/assets/js/templates.min.js" type="text/javascript"></script>
-<script src="/assets/js/app.min.js" type="text/javascript"></script>
+<script src="https://assets.enginsight.com/app/js/tags.min.js" type="text/javascript"></script>
+<script src="https://assets.enginsight.com/app/js/templates.min.js" type="text/javascript"></script>
+<script src="https://assets.enginsight.com/app/js/app.min.js" type="text/javascript"></script>
+<script src="https://assets.enginsight.com/js/ga.js" type="text/javascript" async=""></script>
