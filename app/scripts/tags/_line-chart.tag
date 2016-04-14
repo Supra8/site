@@ -130,51 +130,10 @@
     });
   </script>
   <style>
-    line-chart rect {
-      opacity: 0;
-      fill: #ccc;
-      stroke: transparent;
-      stroke-width: 3px;
-    }
-    line-chart rect:hover {
-      opacity: 1;
-    }
-
-    line-chart .area {
-      stroke: none;
-    }
-
-    line-chart .area.used {
-      fill: #e91e63;
-    }
-
-    line-chart .area.cached,
-    line-chart .area.buffers,
-    line-chart .area.free {
-      fill: rgba(233, 30, 99, 0.33);
-    }
-
-    line-chart .selected {
-      font-size: 0.9em;
-      position: absolute;
-      top: 15px;
-      left: 100px;
-      color: #222;
-    }
-
-    line-chart .selected .prop {
-      color: #e91e63;
-      font-weight: 500;
-    }
-
     line-chart {
       display: inline-block;
       background: #fff;
       position: relative;
-    }
-    line-chart .header {
-      padding: 15px 0;
-      margin-bottom: -30px;
     }
     line-chart .header .title {
       color: #333;

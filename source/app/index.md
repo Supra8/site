@@ -19,9 +19,8 @@ title: app
 </div>
 
 <div class="navigation">
-  <a class="item" href="/"><i class="material-icons">graphic_eq</i></a>
-  <a class="item" href="/servers"><i class="material-icons">desktop_windows</i></a>
-  <!--<a class="item octicon octicon-radio-tower">Activites</a>-->
+  <a class="item" href="/"><i class="material-icons">view_headline</i></a>
+  <a class="item" href="/servers"><i class="material-icons">settings_ethernet</i></a>
   <a class="item" href="/users"><i class="material-icons">accessibility</i></a>
   <a class="item" href="/settings"><i class="material-icons">tune</i></a>
   <a class="item" href="/feedback"><i class="material-icons">chat_bubble_outline</i></a>

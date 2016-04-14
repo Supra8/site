@@ -137,10 +137,16 @@
     line-chart {
       width: 50%;
       margin-right: -4px;
-      margin-bottom: 15px;
+      margin-bottom: 30px;
       padding-bottom: 30px;
       padding-right: 15px;
       border-bottom: solid 1px #ddd;
+      min-height: 266px;
+      .header {
+        padding: 0;
+        height: 45px;
+        border-bottom: dashed 1px #ddd;
+      }
       svg {
         width: 100%;
         min-height: 200px;

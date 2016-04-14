@@ -82,8 +82,10 @@
           x: {
             type: 'timeseries',
             tick: {
-              count: 5,
-              format: '%d.%m.%Y'
+              count: 4,
+              format: function(unix) {
+                return moment(unix).format('HH:mm');
+              }
             }
           },
           y: {
@@ -114,6 +116,9 @@
     });
   </script>
   <style>
+  line-chart svg {
+    overflow: visible!important;
+  }
     line-chart .c3-line {
       stroke-width: 3px;
       stroke-linejoin: round;
