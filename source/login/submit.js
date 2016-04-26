@@ -79,7 +79,7 @@ document
               setInterval(function () {
                 if (!alreadyRedirected && getCookie('id') && getCookie('session')) {
                   alreadyRedirected = true;
-                  location = '/' + document.documentElement.lang + '/app/';
+                  location = 'https://app.enginsight.com';
                 }
               }, 100);
             }
