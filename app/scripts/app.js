@@ -7,7 +7,7 @@ $(document).ajaxError((err, xhr) => {
       let invalidDate = new Date(0);
       document.cookie = `${name}=;expires=${invalidDate.toUTCString()};path=/;domain=.enginsight.com;`;
     });
-    location = `/${document.documentElement.lang}/login/`;
+    location = `//enginsight.com/login/`;
   }
 });
 
