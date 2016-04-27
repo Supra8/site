@@ -10,8 +10,9 @@ subtitle: Data-Driven Monitoring
 description:
 author: Eric Range
 
-language: de
-root: /
+language:   en
+root:       /en/
+public_dir: public/en/
 
 # hexo-all-minifier ###################
 html_minifier:
@@ -49,7 +50,6 @@ url: https://enginsight.com
 
 # Directory
 source_dir: source
-public_dir: public
 i18n_dir: :lang
 skip_render:
 
