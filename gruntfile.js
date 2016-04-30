@@ -1,6 +1,9 @@
 module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
   grunt.initConfig({
+
+  	
+  	
     babel: {
       options: {
         sourceMap: true,
@@ -8,7 +11,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'public/assets/js/app.js': 'public/assets/js/app.js'
+          'public/assets/js/app.js': 'public/assets/js/app.es6.js'
         }
       }
     },
@@ -158,7 +161,7 @@ module.exports = function(grunt) {
           'app/scripts/modules/*.js',
           'app/scripts/collections/*.js'
         ],
-        dest: 'public/assets/js/app.js',
+        dest: 'public/assets/js/app.es6.js',
       },
     },
     htmlmin: {
@@ -204,16 +207,19 @@ module.exports = function(grunt) {
         }]
       }
     },
-    shell: {
-      generate_de: {
-        command: 'hexo generate --config config_de.yml'
+    hexo: {
+      clean: {
+        options: {
+          root: '/',
+          cliCmd: 'clean'
+        }
       },
-      generate_en: {
-        command: 'hexo generate --config config_en.yml'
+      generate: {
+        options: {
+          root: '/',
+          cliCmd: 'generate'
+        }
       },
-      deploy: {
-        command: ''
-      }
     }
   });
 
@@ -228,11 +234,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-riot');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-compress');
-  grunt.loadNpmTasks('grunt-shell');
+  grunt.loadNpmTasks('grunt-hexo');
 
   grunt.registerTask('build', ['sass', 'autoprefixer', 'cssmin', 'jst', 'riot', 'concat', 'babel', 'uglify', 'copy']);
-
-  grunt.registerTask('site', ['shell:generate_de', 'shell:generate_en', 'shell:deploy']);
+  grunt.registerTask('buildIncr', ['sass', 'autoprefixer', 'cssmin', 'jst', 'riot', 'concat', 'babel', 'uglify:app', 'copy']);
 
   grunt.registerTask('html', ['htmlmin', 'compress']);
 
