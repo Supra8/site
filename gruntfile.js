@@ -162,18 +162,28 @@ module.exports = function(grunt) {
       },
     },
     htmlmin: {
-      site: {
+      de: {
         options: {
           removeComments: true,
           collapseWhitespace: true,
           minifyCSS: true
         },
         files: {
-          'public/index.html': 'public/index.html',
-          'public/app/index.html': 'public/app/index.html',
-          'public/login/index.html': 'public/login/index.html',
-          'public/pricing/index.html': 'public/pricing/index.html',
-          'public/team/index.html': 'public/team/index.html'
+          'public/de/index.html': 'public/de/index.html',
+          'public/de/login/index.html': 'public/de/login/index.html',
+          'public/de/contact/index.html': 'public/de/contact/index.html'
+        }
+      },
+      en: {
+        options: {
+          removeComments: true,
+          collapseWhitespace: true,
+          minifyCSS: true
+        },
+        files: {
+          'public/en/index.html': 'public/en/index.html',
+          'public/en/login/index.html': 'public/en/login/index.html',
+          'public/en/contact/index.html': 'public/en/contact/index.html'
         }
       },
     },
@@ -232,7 +242,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build', ['sass', 'autoprefixer', 'cssmin', 'jst', 'riot', 'concat', 'babel', 'uglify', 'copy']);
 
-  grunt.registerTask('site', ['shell:generate_de', 'shell:generate_en', 'shell:deploy']);
+  grunt.registerTask('site', ['shell:generate_de', 'shell:generate_en', 'shell:deploy', 'htmlmin']);
 
   grunt.registerTask('html', ['htmlmin', 'compress']);
 
