@@ -8,10 +8,12 @@ navigation:
   login: 'Anmelden'
   registration: 'Registrieren'
   contact: 'Kontakt'
+  about: 'Über uns'
 
 documentation: 'Dokumentation'
 
 slogan: 'Your way to an autonomous IT infrastructure monitoring'
+description: 'Enginsight ist ein selbstständig lernendes Server Monitoring Tool. Es ermittelt das Normalverhalten Ihrer Server und alarmiert Sie bei atypischen Verhaltensmustern.'
 
 index:
   hero:

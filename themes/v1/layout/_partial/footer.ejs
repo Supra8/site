@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer itemscope itemtype="http://schema.org/WPFooter" class="footer">
   <div class="sign-up">
     <div class="container">
       <a href="/" class="button button-primary">
@@ -10,6 +10,11 @@
   <nav class="container">
     <ul>
       <li><a href="/">Enginsight</a></li>
+      <li>
+        <a href="<%- config.root %>about/">
+          <%- __('navigation.about') %>
+        </a>
+      </li>
       <li>
         <a href="<%- config.root %>contact/">
           <%- __('navigation.contact') %>

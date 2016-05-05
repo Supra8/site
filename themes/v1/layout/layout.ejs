@@ -8,9 +8,9 @@
 <% } else { %>
   <% if(!page.head) { %>
   <%- partial('_partial/head') %>
-  <body class="<%= page.title %>-page">
+  <body itemscope itemtype="http://schema.org/WebPage" class="<%= page.title %>-page">
   <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
-  <main><%- body %></main>
+  <main itemscope itemprop="mainContentOfPage"><%- body %></main>
   <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
 
   <% } else { %>

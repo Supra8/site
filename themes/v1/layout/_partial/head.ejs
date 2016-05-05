@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/de/css/style.css">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
+    <meta name="description" content="<%- __('description') %>">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="api-host" content="<%= config.api.host %><%= config.api.port !== '' ? ':' + config.api.port : '' %>">
     <meta name="cookie-domain" content="<%= config.api.cookie.domain %>">
@@ -17,7 +17,7 @@
     <%   return this.charAt(0).toUpperCase() + this.slice(1); %>
     <% } %>
 
-    <title><%= page.title !== 'index' ? config.title + ' ' + page.title.capitalizeFirstLetter() : config.title %> - <%= config.subtitle %></title>
+    <title><%= page.title !== 'index' ? config.title + ' ' + page.title.capitalizeFirstLetter() : config.title %> – <%= config.subtitle %></title>
 
     <link rel="alternate" href="https://enginsight.com/" hreflang="x-default" />
     <link rel="alternate" href="https://enginsight.com/de/" hreflang="de" />

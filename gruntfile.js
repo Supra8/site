@@ -171,7 +171,8 @@ module.exports = function(grunt) {
         files: {
           'public/de/index.html': 'public/de/index.html',
           'public/de/login/index.html': 'public/de/login/index.html',
-          'public/de/contact/index.html': 'public/de/contact/index.html'
+          'public/de/contact/index.html': 'public/de/contact/index.html',
+          'public/de/about/index.html': 'public/de/about/index.html'
         }
       },
       en: {
@@ -183,7 +184,8 @@ module.exports = function(grunt) {
         files: {
           'public/en/index.html': 'public/en/index.html',
           'public/en/login/index.html': 'public/en/login/index.html',
-          'public/en/contact/index.html': 'public/en/contact/index.html'
+          'public/en/contact/index.html': 'public/en/contact/index.html',
+          'public/en/about/index.html': 'public/en/about/index.html'
         }
       },
     },
@@ -215,6 +217,9 @@ module.exports = function(grunt) {
       }
     },
     shell: {
+      clean: {
+        command: 'rm ./public -r -f'
+      },
       generate_de: {
         command: 'hexo generate --config config_de.yml'
       },
@@ -242,7 +247,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build', ['sass', 'autoprefixer', 'cssmin', 'jst', 'riot', 'concat', 'babel', 'uglify', 'copy']);
 
-  grunt.registerTask('site', ['shell:generate_de', 'shell:generate_en', 'shell:deploy', 'htmlmin']);
+  grunt.registerTask('site', ['shell:clean', 'shell:generate_de', 'shell:generate_en', 'shell:deploy', 'htmlmin']);
 
   grunt.registerTask('html', ['htmlmin', 'compress']);
 

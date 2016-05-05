@@ -8,10 +8,12 @@ navigation:
   login: 'Sign In'
   registration: 'Sign Up'
   contact: 'Contact'
+  about: 'About us'
 
 documentation: 'Docs'
 
 slogan: 'Your way to an autonomous IT infrastructure monitoring'
+description: ''
 
 index:
   hero:
