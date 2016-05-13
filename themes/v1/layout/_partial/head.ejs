@@ -19,9 +19,9 @@
 
     <title><%= page.title !== 'index' ? config.title + ' ' + page.title.capitalizeFirstLetter() : config.title %> – <%= config.subtitle %></title>
 
-    <link rel="alternate" href="https://enginsight.com/" hreflang="x-default" />
-    <link rel="alternate" href="https://enginsight.com/de/" hreflang="de" />
-    <link rel="alternate" href="https://enginsight.com/en/" hreflang="en" />
+    <link rel="alternate" href="https://enginsight.com/en/<%= page.title !== 'index' ? page.title + '/': '' %>" hreflang="x-default" />
+    <link rel="alternate" href="https://enginsight.com/de/<%= page.title !== 'index' ? page.title + '/': '' %>" hreflang="de" />
+    <link rel="alternate" href="https://enginsight.com/en/<%= page.title !== 'index' ? page.title + '/': '' %>" hreflang="en" />
     <link rel="canonical" href="https://enginsight.com<%- config.root %><%= page.title !== 'index' ? page.title + '/': '' %>">
 
     <% if(page.title === 'login') { %>
