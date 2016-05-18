@@ -24,3 +24,7 @@ login:
   login: 'Sign in'
   password: 'Password'
   email: 'E-Mail'
+  
+mainpart:
+  title: 'Data-Driven Monitoring'
+  text: 'Enginsight is an autonomous learning Server Monitoring Tool. It determines the normal behavior of your servers and will alert you in a atypical behavior.'
