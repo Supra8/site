@@ -221,10 +221,10 @@ module.exports = function(grunt) {
         command: 'rm ./public -r -f'
       },
       generate_de: {
-        command: 'hexo generate --config config_de.yml'
+        command: 'hexo generate --config ./config_de.yml'
       },
       generate_en: {
-        command: 'hexo generate --config config_en.yml'
+        command: 'hexo generate --config ./config_en.yml'
       },
       deploy: {
         command: ''

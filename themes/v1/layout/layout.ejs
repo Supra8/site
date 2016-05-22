@@ -5,6 +5,12 @@
   </body>
   </html>
 
+<% } else if(page.title === '404') { %>
+
+  <%- partial('_partial/head-empty') %>
+  <body><%- body %></body>
+  </html>
+
 <% } else { %>
   <% if(!page.head) { %>
   <%- partial('_partial/head') %>
