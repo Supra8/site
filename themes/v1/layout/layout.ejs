@@ -15,9 +15,9 @@
   <% if(!page.head) { %>
   <%- partial('_partial/head') %>
   <body itemscope itemtype="http://schema.org/WebPage" class="<%= page.title %>-page">
-  <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
+  <%- partial('_partial/header') %>
   <main itemscope itemprop="mainContentOfPage"><%- body %></main>
-  <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+  <%- partial('_partial/footer') %>
 
   <% } else { %>
   <%- partial('_partial/' + page.head) %>
@@ -25,6 +25,8 @@
 
   <% } %>
 
+  <%- partial('_partial/sign-up') %>
+  <script type="text/javascript" src="/de/js/sign-up.js"></script>
   <script type="text/javascript" src="https://assets.enginsight.com/js/ga.js" async></script>
   </body>
   </html>

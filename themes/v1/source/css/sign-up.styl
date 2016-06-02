@@ -1,0 +1,46 @@
+body.sign-up
+  overflow: hidden;
+
+#sign-up
+  opacity: 0;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+
+  .login
+    color: #fff;
+    margin-top: 15px;
+    display: block;
+    font-size: 0.8em;
+
+  &.active
+    z-index: 99;
+    transition: opacity .5s;
+    opacity: 1!important;
+    width: 100%;
+    height: 100%;
+    .layer
+      background-color: rgba(0, 0, 0, 0.9);
+      height: 100%;
+
+    .inner
+      width: 100%;
+      max-width: 300px;
+      left: 50%;
+      top: 50%;
+      position: absolute;
+      margin-left: -150px;
+      height: 100px;
+      margin-top: -50px;
+      @media screen and (max-width: 300px)
+        padding: 0px 15px;
+        left: inherit;
+        margin-left: inherit;
+
+      input
+        display: block;
+        width: 100%;
+        text-align: center;
+        &[type="submit"]
+          margin-top: 5px;
