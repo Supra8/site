@@ -12,13 +12,63 @@ navigation:
 
 documentation: 'Docs'
 
-slogan: 'Your way to an autonomous IT infrastructure monitoring'
-description: ''
-
 index:
-  hero:
-    primary: 'Sign up for closed Alpha!'
+  hero: 'DATA-DRIVEN MONITORING'
+  slogan: 'Your way to an autonomous IT infrastructure monitoring'
+  primary: 'Sign up for closed Beta'
+  
+  hero2: 'Data-Driven Monitoring'
+  description: 'Enginsight is an independent learning server monitoring tool. It determines the normal behavior of your servers and alerts you to atypical behavior patterns.'
 
+  keyfact1: 'Data-Driven Analytics'
+  keyfactDescription1: 'To capture specific scenarios for each server the monitoring is based on learned input parameters.'
+  
+  keyfact2: 'Intelligent Pattern Recognition'
+  keyfactDescription2: 'If enginsight recognize cycles during runntime they well be considered for the further monitoring strategie.'
+  
+  keyfact3: 'Automation'
+  keyfactDescription3: 'Context-Based Automation will reduce the number of administrativ humen interactions.'
+  
+  keyfact4: 'Impact Detection'
+  keyfactDescription4: 'Dependence analysis can identify potential risks and bottlenecks in your infrastructure and help to eliminate them.'
+  
+  keyfact5: 'Location-based Monitoring'
+  keyfactDescription5: 'Meassure the globel quality and availability of an service by using our distributet Orbs.'
+  
+  keyfact6: 'Security'
+  keyfactDescription6: 'All information is encrypted and can be viewed and processed only by the intended recipient.'
+  
+  benefitsHead: 'Save time and money'
+  benefit1: 'Autonomous monitoring of large and rapidly growing infrastructure.'
+  benefit2: 'Reduction of personnel expenses and Day-to-Day Management.'
+  benefit3: 'Efficient risk management.'
+  
+  offerHead: 'Hosting'
+  cloudHead: 'Enginsight Cloud'
+  cloudDescription: 'Manage your information easily via our Enginsight cloud service in a dedicated area.'
+  onPremiseHead: 'On-Premise'
+  onPremiseDescription: 'Host your own independent Enginsight instance on your server.'
+  more: 'Learn more'
+  
+  registerHero: ' Register for free.'
+
+contact:
+  mailadress: 'Your email address'
+  title: 'Title'
+  message: 'Your message'
+  
+  send: 'send message'
+  
+about:
+  how: 'Who we are'
+  what: 'What happened until now''
+  name1: 'Vorname Nachname'
+  namedescription1:
+  name2: 'Vorname Nachname'
+  namedescription2:
+  
+impressum:	
+	
 login:
   title: 'Sign in to Enginsight'
   login: 'Sign in'
