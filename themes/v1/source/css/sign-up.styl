@@ -9,15 +9,16 @@ body.sign-up
   z-index: -1;
 
   .login
-    color: #fff;
     margin-top: 15px;
     display: block;
-    font-size: 0.8em;
+    font-size: .85em;
+    color: #999;
 
   &.active
     z-index: 99;
     transition: opacity .5s;
     opacity: 1!important;
+    visibility: visible!important;
     width: 100%;
     height: 100%;
     .layer
@@ -26,21 +27,28 @@ body.sign-up
 
     .inner
       width: 100%;
-      max-width: 300px;
+      max-width: 400px;
       left: 50%;
       top: 50%;
       position: absolute;
-      margin-left: -150px;
-      height: 100px;
-      margin-top: -50px;
-      @media screen and (max-width: 330px)
+      margin-left: -200px;
+      margin-top: -130px;
+      background: #eee;
+      padding: 30px;
+      @media screen and (max-width: 430px)
         padding: 0px 15px;
         left: inherit;
         margin-left: inherit;
 
+      .title
+        margin-bottom: 15px;
+        font-size: 1.5em;
+
       input
         display: block;
         width: 100%;
-        text-align: center;
+        border-radius: 3px;
+        margin-top: 5px;
         &[type="submit"]
-          margin-top: 5px;
+          background: #e91e63;
+          color: #fff;
