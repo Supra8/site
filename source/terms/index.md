@@ -1,0 +1,4 @@
+---
+title: terms
+layout: terms
+---
