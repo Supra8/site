@@ -19,49 +19,49 @@ index:
     primary: 'Closed Beta Registrierung'
 
   slogan: 'Your way to an autonomous IT infrastructure monitoring'
-  
+
   hero2: 'Data-Driven Monitoring'
   description: 'Enginsight ist ein selbstständig lernendes Server Monitoring Tool. Es ermittelt das Normalverhalten Ihrer Server und alarmiert Sie bei atypischen Verhaltensmustern.'
 
   keyfact1: 'Data-Driven Analytics'
   keyfactDescription1: 'Das komplette Monitoring Ihrer Server richtet sich auf die Eingabegrößen aus und kann so spezifische Szenarien abbilden und erfassen.'
-  
+
   keyfact2: 'Intelligente Mustererkennung'
   keyfactDescription2: 'Falls Muster in Zyklen während der Laufzeit Ihrer Server auftreten werden diese automatisch erkannt und im Monitoring berücksichtig.'
-  
+
   keyfact3: 'Automatisierung'
   keyfactDescription3: 'Kontextbasierter Automatismus auf Basis von Leistungsparametern reduzieren die Anzahl von Eingriffen administrativer Tätigkeiten.'
-  
+
   keyfact4: 'Impact Detection'
   keyfactDescription4: 'Abhängigkeitsanalysen können potentielle Risiken und Engpässe in Ihrer Infrastruktur ermitteln und helfen diese zu beseitigen.'
-  
+
   keyfact5: 'Location-based Monitoring'
   keyfactDescription5: 'Verteilte Orbs überwachen die Leistungsfähigkeit Ihrer Systeme von beliebigen Orten aus, um sie global bewerten zu können.'
-  
+
   keyfact6: 'Verschlüsselung'
   keyfactDescription6: 'Alle Daten werden verschlüsselt übertragen und können nur vom vorgesehenen Empfänger eingesehen und verarbeitet werden.'
-  
+
   benefitsHead: 'Effizient Zeit und Kosten sparen'
   benefit1: 'Autonome Überwachung von großen und schnell wachsenden Infrastrukturen.'
   benefit2: 'Reduzierung von Personalaufwand und Day-To-Day Management.'
   benefit3: 'Effizientes Risikomanagement.'
-  
+
   offerHead: 'Hosting'
   cloudHead: 'Enginsight Cloud'
-  cloudDescription: 'Verwalten sie Ihre Daten bequem über unseren Enginsight Cloud Service in einem dedizierten Bereich.'
+  cloudDescription: 'Verwalten Sie Ihre Daten bequem über unseren Enginsight Cloud Service in einem dedizierten Bereich.'
   onPremiseHead: 'On-Premise'
   onPremiseDescription: 'Betreiben Sie Ihre eigene unabhängige Enginsight Instanz als On-Premise Lösung in Ihrem Unternehmen.'
   more: 'Erfahren Sie mehr'
-  
+
   registerHero: 'Gleich heute kostenlos registrieren und Risiko reduzieren.'
 
 contact:
   mailadress: 'Ihre E-Mail Adresse'
   title: 'Titel'
   message: 'Ihre Nachricht an uns'
-  
+
   send: 'Nachricht versenden'
-  
+
 about:
   how: 'Wer wir sind'
   what: 'Was bisher geschah'
@@ -69,9 +69,9 @@ about:
   namedescription1: ''
   name2: 'Vorname Nachname'
   namedescription2: ''
-  
-impressum: ''  
-		
+
+impressum: ''
+
 login:
   title: 'Sign in to Enginsight'
   login: 'Anmelden'
