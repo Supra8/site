@@ -1,4 +1,6 @@
-search: Search
+subtitle: 'Data-Driven Monitoring'
+
+search: 'Search'
 
 language: 'en'
 
@@ -13,9 +15,10 @@ navigation:
 documentation: 'Docs'
 
 index:
-  hero: 'DATA-DRIVEN MONITORING'
+  hero:
+    primary: 'Sign up for closed Beta'
+
   slogan: 'Your way to an autonomous IT infrastructure monitoring'
-  primary: 'Sign up for closed Beta'
   
   hero2: 'Data-Driven Monitoring'
   description: 'Enginsight is an independent learning server monitoring tool. It determines the normal behavior of your servers and alerts you to atypical behavior patterns.'
@@ -61,13 +64,13 @@ contact:
   
 about:
   how: 'Who we are'
-  what: 'What happened until now''
+  what: 'What happened until now'
   name1: 'Vorname Nachname'
-  namedescription1:
+  namedescription1: ''
   name2: 'Vorname Nachname'
-  namedescription2:
+  namedescription2: ''
   
-impressum:	
+impressum: ''
 	
 login:
   title: 'Sign in to Enginsight'
