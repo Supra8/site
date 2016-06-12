@@ -1,10 +1,21 @@
-<div id="sign-up-modal" style="opacity: 0; visibility: hidden;">
-  <div class="layer"></div>
+<section id="sign-up-modal" style="opacity: 0; visibility: hidden;">
+  <div class="outer"></div>
   <div class="inner">
-    <div class="title">30 Tage kostenlos testen</div>
-    <input type="name" name="name" placeholder="Ihr Name">
-    <input type="email" name="email" placeholder="Ihre E-Mail Adresse">
-    <input type="submit" value="Account erstellen">
-    <a href="https://app.enginsight.com" class="login">Sie haben bereits ein Account bei uns?</a>
+    <header class="sign-up-header">
+      <div class="title">Enginsight</div>
+      <div class="subtitle">Registrierung</div>
+    </header>
+
+    <form action="https://api.enginsight.com/v1/users" method="post">
+      <input type="name" name="full-name" placeholder="Ihr vollständiger Name" required>
+      <input type="email" name="email" placeholder="Ihre E-Mail Adresse" required>
+
+      <a class="button button-mute" href="https://app.enginsight.com">Portallogin</a>
+      <button class="button button-primary" type="submit">Account erstellen</button>
+    </form>
+
+    <footer class="sign-up-footer">
+      <div class="terms">By clicking "Account erstellen", you agree to our terms of service and privacy policy. We'll occasionally send you account related emails.</div>
+    </footer>
   </div>
-</div>
+</section>

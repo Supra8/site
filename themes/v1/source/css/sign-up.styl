@@ -21,7 +21,7 @@ body.sign-up
     visibility: visible!important;
     width: 100%;
     height: 100%;
-    .layer
+    .outer
       background-color: rgba(0, 0, 0, 0.9);
       height: 100%;
 
@@ -34,21 +34,49 @@ body.sign-up
       margin-left: -200px;
       margin-top: -130px;
       background: #eee;
-      padding: 30px;
+      padding: 30px 25px 20px 25px;
       @media screen and (max-width: 430px)
         padding: 0px 15px;
         left: inherit;
         margin-left: inherit;
 
-      .title
-        margin-bottom: 15px;
-        font-size: 1.5em;
+      .terms
+        font-size: 0.7em;
+        color: #999;
+        margin-top: 15px;
+        line-height: 1.4em;
+
+      .button
+        display: inline-block;
+        padding: 14.5px 12.5px 12.5px 12.5px;
+        width: 50%;
+        margin-right: -4px;
+        font-size: 0.9em;
+        margin-top: 15px;
+        &.button-primary
+          background: #e91e63;
+          color: #fff;
+
+        &.button-mute
+          background: #ddd;
+          color: #999;
+
+      .sign-up-header
+        margin-bottom: 20px;
+        .title
+          margin-bottom: 15px;
+          font-size: 1.1em;
+          font-weight: 500;
+          text-transform: uppercase;
+          float: left;
+          margin-right: 5px;
+
+        .subtitle
+          font-size: 1.1em;
+          color: #999;
 
       input
         display: block;
         width: 100%;
         border-radius: 3px;
         margin-top: 5px;
-        &[type="submit"]
-          background: #e91e63;
-          color: #fff;

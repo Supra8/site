@@ -17,7 +17,7 @@ function showSignUp(event) {
 
   body.classList.add('sign-up');
   signUp.classList.add('active');
-  signUp.querySelector('.layer').addEventListener('click', hideSignUp, false);
+  signUp.querySelector('.outer').addEventListener('click', hideSignUp, false);
 }
 
 function hideSignUp() {
