@@ -1,4 +1,4 @@
-<section id="sign-up-modal" style="opacity: 0; visibility: hidden;">
+<div id="sign-up-modal" style="opacity: 0; visibility: hidden;">
   <div class="outer"></div>
   <div class="inner">
     <header class="sign-up-header">
@@ -9,7 +9,7 @@
     <form action="https://api.enginsight.com/v1/users" method="post">
       <input type="name" name="fullName" placeholder="Ihr vollständiger Name" required>
       <input type="email" name="email" placeholder="Ihre E-Mail Adresse" required>
-      <input type="hidden" name="language" value="<%= config.language %>">
+      <input type="hidden" name="language" value="<%- config.language %>">
 
       <a class="button button-mute" href="https://app.enginsight.com">Portal Login</a>
       <button class="button button-primary" type="submit">Account erstellen</button>
@@ -19,4 +19,4 @@
       <div class="terms">By clicking "Account erstellen", you agree to our terms of service and privacy policy. We'll occasionally send you account related emails.</div>
     </footer>
   </div>
-</section>
+</div>

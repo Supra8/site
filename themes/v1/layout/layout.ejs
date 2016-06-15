@@ -14,7 +14,7 @@
 <% } else { %>
   <% if(!page.head) { %>
   <%- partial('_partial/head') %>
-  <body itemscope itemtype="http://schema.org/WebPage" class="<%= page.title %>-page">
+  <body itemscope itemtype="http://schema.org/WebPage" class="<%- page.title %>-page">
   <%- partial('_partial/header') %>
   <main itemscope itemprop="mainContentOfPage"><%- body %></main>
   <%- partial('_partial/footer') %>

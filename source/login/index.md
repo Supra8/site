@@ -1,4 +1,0 @@
----
-title: login
-layout: login
----

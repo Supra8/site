@@ -1,5 +1,5 @@
 <div class="container">
-  <form class="contact-form" action="<%= config.api.host %><%= config.api.port !== '' ? ':' + config.api.port : '' %>/site/contact" method="post">
+  <form class="contact-form" action="<%- config.api.host %><%- config.api.port !== '' ? ':' + config.api.port : '' %>/site/contact" method="post">
     <label for="email">Ihre E-Mail Adresse</label>
     <input type="email" name="email" value="" required>
 
@@ -9,7 +9,7 @@
     <label for="content">Ihre Nachricht an uns</label>
     <textarea name="content" rows="10" required></textarea>
 
-    <input type="hidden" name="language" value="<%= __('language') %>">
+    <input type="hidden" name="language" value="<%- __('language') %>">
 
     <input class="submit" type="submit" value="Nachricht versenden">
   </form>
