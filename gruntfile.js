@@ -1,26 +1,20 @@
 module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
   grunt.initConfig({
-    copy: {
-      main: {
-        files: [{
-          expand: true,
-          filter: 'isFile',
-          flatten: true,
-          src: [
-            'bower_components/octicons/octicons/*.ttf',
-            'bower_components/octicons/octicons/*.woff',
-            'bower_components/octicons/octicons/*.svg',
-            'bower_components/octicons/octicons/*.eot',
-
-            'bower_components/material-design-icons/iconfont/*.ttf',
-            'bower_components/material-design-icons/iconfont/*.woff',
-            'bower_components/material-design-icons/iconfont/*.woff2',
-            'bower_components/material-design-icons/iconfont/*.svg',
-            'bower_components/material-design-icons/iconfont/*.eot',
-          ],
-          dest: 'public/assets/font'
-        }]
+    uglify: {
+      options: {
+        compress: {
+          drop_console: true
+        }
+      },
+      js: {
+        files: {
+          'themes/v1/source/js/bundle.min.js': [
+            'themes/v1/source/js/ga.js',
+            'themes/v1/source/js/sign-up.js',
+            'themes/v1/source/js/navigation.js'
+          ]
+        }
       }
     },
     htmlmin: {
@@ -96,12 +90,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-autoprefixer');
-  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-compress');
   grunt.loadNpmTasks('grunt-shell');
 
-  grunt.registerTask('site', ['shell:clean', 'shell:generate_de', 'shell:generate_en', 'shell:deploy', 'htmlmin']);
+  grunt.registerTask('site', ['uglify:js', 'shell:clean', 'shell:generate_de', 'shell:generate_en', 'shell:deploy', 'htmlmin']);
 
   grunt.registerTask('html', ['htmlmin', 'compress']);
 

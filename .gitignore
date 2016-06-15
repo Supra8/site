@@ -7,6 +7,5 @@ public/
 .deploy*/
 .sass-cache
 bower_components
-assets
-dev.bat
-aws-keys.json
+
+themes/v1/source/js/bundle.min.js
