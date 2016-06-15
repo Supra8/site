@@ -6,7 +6,7 @@
   transform: translateY(-50%);
   z-index: 99;
   @media screen and (max-width: 480px)
-    display: block;
+    display: inline;
 
 .nav-items
   position: absolute;
@@ -16,15 +16,16 @@
 
   @media screen and (max-width: 480px)
     width: 100%;
-    top: 0;
-    right: -100%;
+    right: 0;
+    top: -180px;
+    top: calc(-100% - 40px);
     transform: none;
     background: #fff;
     z-index: 9;
 
     &.mobile-nav
-      transition: right .5s;
-      right: 0;
+      transition: top .5s;
+      top: 0;
 
     .items
       padding: 10px 0;
