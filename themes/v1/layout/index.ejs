@@ -1,7 +1,7 @@
 <section class="hero">
   <div class="container">
     <h2 class="title"><%= __('subtitle') %></h2>
-    <h3 class="description">Autonom agierendes Server Monitoring, das Normalverhalten von Servern erkennt und bei abweichendem Verhaltensmustern reagiert.</h3>
+    <h3 class="description"><%= __('index.hero.slogan') %></h3>
     <a href="#" class="sign-up button button-primary"><%= __('index.hero.primary') %></a>
   </div>
 </section>
@@ -13,24 +13,24 @@
         <path d="M0 0h24v24H0z" fill="none"/>
         <path d="M10 12c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM6 8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12-8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm-4 8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm4-4c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-4-4c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-4-4c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
       </svg>
-      <h4>Data-Driven Analytics</h4>
-      <p class="mute">Das komplette Monitoring Ihrer Server richtet sich auf die Eingabegrößen aus und kann so spezifische Szenarien abbilden und erfassen.</p>
+      <h4><%= __('index.keyfact1') %></h4>
+      <p class="mute"><%= __('index.keyfactDescription1') %></p>
     </div>
     <div class="column column-1-3">
       <svg fill="#e91e63" height="50" viewBox="0 0 24 24" width="50" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 0h24v24H0z" fill="none"/>
         <path d="M7 18h2V6H7v12zm4 4h2V2h-2v20zm-8-8h2v-4H3v4zm12 4h2V6h-2v12zm4-8v4h2v-4h-2z"/>
       </svg>
-      <h4>Intelligente Mustererkennung</h4>
-      <p class="mute">Falls Muster in Zyklen während der Laufzeit Ihrer Server auftreten werden diese automatisch erkannt und im  Monitoring berücksichtig.</p>
+      <h4><%= __('index.keyfact2') %></h4>
+      <p class="mute"><%= __('index.keyfactDescription2') %></p>
     </div>
     <div class="column column-1-3">
       <svg fill="#e91e63" height="50" viewBox="0 0 24 24" width="50" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 0h24v24H0z" fill="none"/>
         <path d="M14 4l2.29 2.29-2.88 2.88 1.42 1.42 2.88-2.88L20 10V4zm-4 0H4v6l2.29-2.29 4.71 4.7V20h2v-8.41l-5.29-5.3z"/>
       </svg>
-      <h4>Automatisierung</h4>
-      <p class="mute">Kontextbasierter Automatismus auf Basis von Leistungsparametern reduzieren die Anzahl von Eingriffen administrativer Tätigkeiten.</p>
+      <h4><%= __('index.keyfact3') %></h4>
+      <p class="mute"><%= __('index.keyfactDescription3') %></p>
     </div>
     <div class="column column-1-3">
       <svg fill="#e91e63" height="50" viewBox="0 0 24 24" width="50" xmlns="http://www.w3.org/2000/svg">
@@ -38,8 +38,8 @@
         <path d="M17 16l-4-4V8.82C14.16 8.4 15 7.3 15 6c0-1.66-1.34-3-3-3S9 4.34 9 6c0 1.3.84 2.4 2 2.82V12l-4 4H3v5h5v-3.05l4-4.2 4 4.2V21h5v-5h-4z"/>
         <path d="M0 0h24v24H0z" fill="none"/>
       </svg>
-      <h4>Impact Detection</h4>
-      <p class="mute">Abhängigkeitsanalysen können potentielle Risiken und Engpässe in Ihrer Infrastruktur ermitteln und helfen diese zu beseitigen.</p>
+      <h4><%= __('index.keyfact4') %></h4>
+      <p class="mute"><%= __('index.keyfactDescription4') %></p>
     </div>
     <div class="column column-1-3">
       <svg fill="#e91e63" height="50" viewBox="0 0 24 24" width="50" xmlns="http://www.w3.org/2000/svg">
@@ -48,8 +48,8 @@
         <circle cx="14.8" cy="18" r="2"/>
         <circle cx="15.2" cy="8.8" r="4.8"/>
       </svg>
-      <h4>Location-based Monitoring</h4>
-      <p class="mute">Verteilte <a href="https://docs.enginsight.com">Orbs</a> überwachen die Leistungsfähigkeit Ihrer Systeme von beliebigen Orten aus, um sie global bewerten zu können.</p>
+      <h4><%= __('index.keyfact5') %></h4>
+      <p class="mute"><%= __('index.keyfactDescription5') %></p>
     </div>
 
     <div class="column column-1-3">
@@ -62,8 +62,8 @@
         </clipPath>
         <path clip-path="url(#b)" d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM8.9 6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2H8.9V6zM18 20H6V10h12v10z"/>
       </svg>
-      <h4>Verschlüsselung</h4>
-      <p class="mute">Alle Daten werden verschlüsselt übertragen und können nur vom vorgesehenen Empfänger eingesehen und verarbeitet werden.</p>
+      <h4><%= __('index.keyfact6') %></h4>
+      <p class="mute"><%= __('index.keyfactDescription6') %></p>
     </div>
   </div>
 </section>

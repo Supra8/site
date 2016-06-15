@@ -1,8 +1,37 @@
+#mobile-nav
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  z-index: 99;
+  @media screen and (max-width: 480px)
+    display: block;
+
 .nav-items
   position: absolute;
   top: 50%;
   right: 15px;
   transform: translateY(-50%);
+
+  @media screen and (max-width: 480px)
+    width: 100%;
+    top: 0;
+    right: -100%;
+    transform: none;
+    background: #fff;
+    z-index: 9;
+
+    &.mobile-nav
+      transition: right .5s;
+      right: 0;
+
+    .items
+      padding: 10px 0;
+      .item
+        float: none!important;
+        padding: 10px 0px;
+
 
   .items
     .item

@@ -17,20 +17,19 @@ documentation: 'Dokumentation'
 index:
   hero:
     primary: 'Closed Beta Registrierung'
-
-  slogan: 'Your way to an autonomous IT infrastructure monitoring'
+    slogan: 'Intelligentes und autonomes Server Monitoring für Ihr Unternehmen'
 
   hero2: 'Data-Driven Monitoring'
   description: 'Enginsight ist ein selbstständig lernendes Server Monitoring Tool. Es ermittelt das Normalverhalten Ihrer Server und alarmiert Sie bei atypischen Verhaltensmustern.'
 
   keyfact1: 'Data-Driven Analytics'
-  keyfactDescription1: 'Das komplette Monitoring Ihrer Server richtet sich auf die Eingabegrößen aus und kann so spezifische Szenarien abbilden und erfassen.'
+  keyfactDescription1: 'Verschiedene Szenarien können anhand der individuellen Leistungsparameter eines Servers bedarfsgerecht überwacht werden.'
 
   keyfact2: 'Intelligente Mustererkennung'
   keyfactDescription2: 'Falls Muster in Zyklen während der Laufzeit Ihrer Server auftreten werden diese automatisch erkannt und im Monitoring berücksichtig.'
 
   keyfact3: 'Automatisierung'
-  keyfactDescription3: 'Kontextbasierter Automatismus auf Basis von Leistungsparametern reduzieren die Anzahl von Eingriffen administrativer Tätigkeiten.'
+  keyfactDescription3: 'Kontextbasierte Automatismen auf Basis von Leistungsparametern reduzieren die Anzahl von manuellen administrativen Tätigkeiten.'
 
   keyfact4: 'Impact Detection'
   keyfactDescription4: 'Abhängigkeitsanalysen können potentielle Risiken und Engpässe in Ihrer Infrastruktur ermitteln und helfen diese zu beseitigen.'
