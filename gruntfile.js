@@ -32,7 +32,6 @@ module.exports = function(grunt) {
         },
         files: {
           'public/de/index.html': 'public/de/index.html',
-          'public/de/login/index.html': 'public/de/login/index.html',
           'public/de/contact/index.html': 'public/de/contact/index.html',
           'public/de/about/index.html': 'public/de/about/index.html'
         }
@@ -45,7 +44,6 @@ module.exports = function(grunt) {
         },
         files: {
           'public/en/index.html': 'public/en/index.html',
-          'public/en/login/index.html': 'public/en/login/index.html',
           'public/en/contact/index.html': 'public/en/contact/index.html',
           'public/en/about/index.html': 'public/en/about/index.html'
         }
