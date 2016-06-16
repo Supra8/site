@@ -11,6 +11,7 @@ navigation:
   registration: 'Registrieren'
   contact: 'Kontakt'
   about: 'Über uns'
+  terms: 'Geschäftsbedingungen'
 
 documentation: 'Dokumentation'
 
@@ -19,7 +20,7 @@ signUp:
   email: 'Ihre E-Mail Adresse'
   submit: 'Account erstellen'
   login: 'Anmelden'
-  terms: 'Mit einem Klick auf “Account erstellen“, stimmen Sie unserer Datenschutzerklärung zu. Weiterhin sind Sie damit einverstanden, das wir Sie via E-Mail kontaktieren dürfen.'
+  terms: 'Mit einem Klick auf “Account erstellen“ stimmen Sie unserer Datenschutzerklärung zu. Weiterhin sind Sie damit einverstanden, dass wir Sie via E-Mail kontaktieren dürfen.'
 
 index:
   hero:
