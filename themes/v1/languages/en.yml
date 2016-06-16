@@ -11,9 +11,15 @@ navigation:
   registration: 'Sign Up'
   contact: 'Contact'
   about: 'About us'
-  terms: 'Terms'
+  privacyPolicy: 'Privacy Policy'
+  terms: 'Terms of Service'
 
 documentation: 'Docs'
+
+footer:
+  column2: 'Terms & Conditions'
+  column3: 'Our Products'
+  column4: 'Top Features'
 
 signUp:
   fullName: 'Your full name'
@@ -56,7 +62,7 @@ index:
   offerHead: 'Hosting'
   cloudHead: 'Enginsight Cloud'
   cloudDescription: 'Manage your information easily via our Enginsight cloud service in a dedicated area.'
-  onPremiseHead: 'On-Premise'
+  onPremiseHead: 'Enginsight On-Premise'
   onPremiseDescription: 'Host your own independent Enginsight instance on your server.'
   more: 'Learn more'
 

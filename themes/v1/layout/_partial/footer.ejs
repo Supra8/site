@@ -1,15 +1,27 @@
 <footer itemscope itemtype="http://schema.org/WPFooter" class="footer">
   <nav class="container">
-    <ul>
-      <li><a href="/">Enginsight</a></li>
-      <li><a href="#" class="sign-up">Registrierung</a></li>
-      <li><a href="/">Impressum</a></li>
-      <li><a href="<%- config.root %>terms/"><%- __('navigation.terms') %></a></li>
+    <ul class="column">
+      <li class="title">Enginsight</li>
       <li>
         <a href="<%- config.root %>contact/">
           <%- __('navigation.contact') %>
         </a>
       </li>
+    </ul>
+    <ul class="column">
+      <li class="title"><%- __('footer.column2') %></li>
+      <li><a href="<%- config.root %>policies/privacy/"><%- __('navigation.privacyPolicy') %></a></li>
+      <li><a href="/">Impressum</a></li>
+      <li><a href="<%- config.root %>policies/terms/"><%- __('navigation.terms') %></a></li>
+    </ul>
+    <ul class="column">
+      <li class="title"><%- __('footer.column3') %></li>
+      <li><a href="#"><%- __('index.cloudHead') %></a></li>
+      <li><a href="#"><%- __('index.onPremiseHead') %></a></li>
+    </ul>
+    <ul class="column">
+      <li class="title"><%- __('footer.column4') %></li>
+      <li><a href="#" class="sign-up">Registrierung</a></li>
       <li>
         <a href="https://app.enginsight.com">
           <%- __('navigation.login') %>

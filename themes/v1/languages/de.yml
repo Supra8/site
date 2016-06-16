@@ -11,9 +11,15 @@ navigation:
   registration: 'Registrieren'
   contact: 'Kontakt'
   about: 'Über uns'
-  terms: 'Geschäftsbedingungen'
+  privacyPolicy: 'Datenschutzerklärung'
+  terms: 'AGB'
 
 documentation: 'Dokumentation'
+
+footer:
+  column2: 'Allgemeine Erklärungen'
+  column3: 'Unsere Produkte'
+  column4: 'Top Funktionen'
 
 signUp:
   fullName: 'Ihr vollständiger Name'
@@ -56,7 +62,7 @@ index:
   offerHead: 'Hosting'
   cloudHead: 'Enginsight Cloud'
   cloudDescription: 'Verwalten Sie Ihre Daten bequem über unseren Enginsight Cloud Service in einem dedizierten Bereich.'
-  onPremiseHead: 'On-Premise'
+  onPremiseHead: 'Enginsight On-Premise'
   onPremiseDescription: 'Betreiben Sie Ihre eigene unabhängige Enginsight Instanz als On-Premise Lösung in Ihrem Unternehmen.'
   more: 'Erfahren Sie mehr'
 
