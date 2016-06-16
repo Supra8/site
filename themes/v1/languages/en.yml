@@ -14,6 +14,13 @@ navigation:
 
 documentation: 'Docs'
 
+signUp:
+  fullName: 'Your full name'
+  email: 'Your email adress'
+  submit: 'Create account'
+  login: 'Portal Login'
+  terms: 'By clicking “Create account“, you agree to our terms of service and privacy policy. We will occasionally send you account related emails.'
+
 index:
   hero:
     primary: 'Sign up for closed Beta'

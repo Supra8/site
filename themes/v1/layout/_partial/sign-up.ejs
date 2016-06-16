@@ -3,20 +3,20 @@
   <div class="inner">
     <header class="sign-up-header">
       <div class="title">Enginsight</div>
-      <div class="subtitle">Registrierung</div>
+      <div class="subtitle"><%- __('navigation.registration') %></div>
     </header>
 
     <form action="https://api.enginsight.com/v1/users" method="post">
-      <input type="text" name="fullName" placeholder="Ihr vollständiger Name" required>
-      <input type="email" name="email" placeholder="Ihre E-Mail Adresse" required>
+      <input type="text" name="fullName" placeholder="<%- __('signUp.fullName') %>" required>
+      <input type="email" name="email" placeholder="<%- __('signUp.email') %>" required>
       <input type="hidden" name="language" value="<%- config.language %>">
 
-      <a class="button button-mute" href="https://app.enginsight.com">Portal Login</a>
-      <button class="button button-primary" type="submit">Account erstellen</button>
+      <a class="button button-mute" href="https://app.enginsight.com"><%- __('signUp.login') %></a>
+      <button class="button button-primary" type="submit"><%- __('signUp.submit') %></button>
     </form>
 
     <footer class="sign-up-footer">
-      <div class="terms">By clicking "Account erstellen", you agree to our terms of service and privacy policy. We'll occasionally send you account related emails.</div>
+      <div class="terms"><%- __('signUp.terms') %></div>
     </footer>
   </div>
 </div>
