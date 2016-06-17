@@ -1,0 +1,53 @@
+@keyframes dash
+  0%
+    stroke-dashoffset: 1000;
+  100%
+    stroke-dashoffset: 0;
+
+@keyframes text
+  0%
+    opacity: 0;
+  100%
+    opacity: 1;
+
+.registration-success-page
+  .info
+    text-align: center;
+    border-top: solid 1px #ddd;
+    padding: 50px 0px;
+    margin-bottom: 50px;
+    @media screen and (max-width: 640px)
+      margin-bottom: 0;
+
+    .title, .email
+      color: #999;
+      animation text .5s linear
+    .title
+      font-size: 1.1em;
+      margin-bottom: 10px;
+      line-height: 1.25em;
+
+  .success
+    text-align: center;
+    margin: 50px auto 50px;
+
+    .title
+      font-size: 1.25em;
+      margin-bottom: 15px;
+      animation text .5s linear
+      line-height: 1.25em;
+
+  .checkmark
+    width 180px
+    margin 0 auto
+
+  .path
+    stroke-dasharray 1000
+    stroke-dashoffset 0
+    animation dash 2s ease-in-out
+
+  p
+    color: #999;
+    animation text .5s linear
+    max-width: 600px;
+    margin: 0 auto;

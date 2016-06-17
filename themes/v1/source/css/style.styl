@@ -13,6 +13,18 @@ global-reset()
 @import "about"
 @import "sign-up"
 @import "terms-privacy"
+@import "success"
+
+// Sticky Footer
+html
+  height: 100%;
+
+header, footer
+  flex-shrink: 0;
+
+main
+  flex: 1 0 auto;
+// End Sticky Footer
 
 html
   font-size: 16px;
@@ -21,6 +33,9 @@ body
   font-family: "Fira Sans", Arial;
   -webkit-text-size-adjust: 100%;
   overflow-x: hidden;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 
 b
   font-weight: 500;
@@ -86,7 +101,7 @@ a
   cursor: pointer;
 
 .section-title
-  font-size: 2.2em;
+  font-size: 2em;
   letter-spacing: -1px;
   margin-bottom: 15px;
   font-weight: 300;
