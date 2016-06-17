@@ -1,1 +1,11 @@
 User-agent: *
+
+Disallow: /en/success/registration/
+Disallow: /de/success/registration/
+Disallow: /en/error/registration/
+Disallow: /de/error/registration/
+
+Disallow: /en/success/contact/
+Disallow: /de/success/contact/
+Disallow: /en/error/contact/
+Disallow: /de/error/contact/
