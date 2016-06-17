@@ -26,9 +26,12 @@ module.exports = function(grunt) {
         },
         files: {
           'public/de/index.html': 'public/de/index.html',
+          'public/de/404/index.html': 'public/de/404/index.html',
           'public/de/contact/index.html': 'public/de/contact/index.html',
           'public/de/about/index.html': 'public/de/about/index.html',
-          'public/de/policies/privacy/index.html': 'public/de/policies/privacy/index.html'
+          'public/de/policies/privacy/index.html': 'public/de/policies/privacy/index.html',
+          'public/de/success/registration/index.html': 'public/de/success/registration/index.html',
+          'public/de/success/contact/index.html': 'public/de/success/contact/index.html'
         }
       },
       en: {
@@ -39,9 +42,12 @@ module.exports = function(grunt) {
         },
         files: {
           'public/en/index.html': 'public/en/index.html',
+          'public/en/404/index.html': 'public/en/404/index.html',
           'public/en/contact/index.html': 'public/en/contact/index.html',
           'public/en/about/index.html': 'public/en/about/index.html',
-          'public/en/policies/privacy/index.html': 'public/en/policies/privacy/index.html'
+          'public/en/policies/privacy/index.html': 'public/en/policies/privacy/index.html',
+          'public/en/success/registration/index.html': 'public/en/success/registration/index.html',
+          'public/en/success/contact/index.html': 'public/en/success/contact/index.html'
         }
       },
     },
