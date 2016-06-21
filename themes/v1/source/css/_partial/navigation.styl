@@ -17,20 +17,22 @@
   @media screen and (max-width: 480px)
     width: 100%;
     right: 0;
-    top: -180px;
-    top: calc(-100% - 40px);
-    transform: none;
+    top: 0;
     background: #fff;
     z-index: 9;
 
+    will-change: transform;
+    transform: translateY(-100%);
+
     &.mobile-nav
-      transition: top .5s;
-      top: 0;
+      transition: transform 0.2s cubic-bezier(0, 0, 0.2, 1);
+      transform: none;
 
     .items
       padding: 10px 0;
       .item
         float: none!important;
+        margin-left: 15px!important;
         padding: 10px 0px;
 
 
