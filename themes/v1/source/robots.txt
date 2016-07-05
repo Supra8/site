@@ -1,7 +1,11 @@
 User-agent: *
 
 Disallow: /en/success/registration/
+Disallow: /en/success/registration/completed/
+
 Disallow: /de/success/registration/
+Disallow: /de/success/registration/completed/
+
 Disallow: /en/error/registration/
 Disallow: /de/error/registration/
 

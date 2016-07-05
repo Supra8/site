@@ -23,7 +23,7 @@ footer:
 
 signUp:
   fullName: 'Your full name'
-  email: 'Your email adress'
+  email: 'Your email address'
   submit: 'Create account'
   login: 'Portal Login'
   terms: 'By clicking “Create account“, you agree to our terms of service and privacy policy. We will occasionally send you account related emails.'
@@ -69,7 +69,7 @@ index:
   registerHero: ' Register for free.'
 
 contact:
-  mailadress: 'Your email address'
+  mailaddress: 'Your email address'
   title: 'Title'
   message: 'Your message'
 
