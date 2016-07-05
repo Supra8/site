@@ -28,13 +28,45 @@ signUp:
   login: 'Anmelden'
   terms: 'Mit einem Klick auf “Account erstellen“ stimmen Sie unserer Datenschutzerklärung zu. Weiterhin sind Sie damit einverstanden, dass wir Sie via E-Mail kontaktieren dürfen.'
 
-index:
-  hero:
-    primary: 'Closed Beta Registrierung'
-    slogan: 'Intelligentes und autonomes Server Monitoring für Ihr Unternehmen'
+signUp2:
+  title: 'Accountinformationen'
+  firstname: 'Vorname'
+  lastname: 'Nachname'
+  newPassword: 'Neues Passwort'
+  newPassword2: 'Passwort wiederholen'
+  continue: 'Weiter'
+  back: 'Zurück'
+  checkPassword: 'Passwörter stimmen nicht überein!'
+  checkField: 'Bitte füllen Sie dieses Feld aus!'
+  checkZip: 'Bitte halten Sie sich an das vorgegebene Format!'
+  address: 'Anschrift'
+  street: 'Straße'
+  city: 'Stadt'
+  postalCode: 'Postleitzahl'
+  land: 'Land'
+  phone: 'Telefon'
+  titleOrga: 'Zur Organisation'
+  orga: 'Name der Organisation'
+  numEmployees: 'Anzahl von Mitarbeitern'
+  thanks: 'Vielen Dank!'
+  thanksText: 'Klicken Sie auf \"Fertig stellen\" um Ihre Registration abzuschließen'
+  finish: 'Fertig stellen'
 
-  hero2: 'Data-Driven Monitoring'
-  description: 'Enginsight ist ein selbstständig lernendes Server Monitoring Tool. Es ermittelt das Normalverhalten Ihrer Server und alarmiert Sie bei atypischen Verhaltensmustern.'
+success:
+  successHero: 'Ihr Account wurde erfolgreich erstellt!'
+  successDescription: 'Wir haben Ihnen eine E-Mail mit einem Bestätigungslink zugesandt. Bitte klicken Sie auf diesen Link, um Ihre Registrierung zu vervollständigen.'
+  successText: 'Haben Sie Fragen? Kontaktieren Sie uns jeder Zeit!'
+  successRegHero: 'Vielen Dank für Ihre Registrierung!'
+  successRegDescription: 'Zurzeit befinden wir uns noch in einer intensiven Testphase. Wir werden Sie so schnell wie möglich informieren, sobald Sie Enginsight vollständig nutzen können.'
+  
+
+index:
+  hero: 'Data-Driven Monitoring'
+  primary: 'Closed Beta Registrierung'
+  logan: 'Intelligentes und autonomes Server Monitoring für Ihr Unternehmen'
+
+  hero2: 'Server Monitoring der nächsten Generation'
+  description: 'Mit Enginsight erhalten Sie ein qualitativ hochwertiges Monitoring Ihrer Serverinfrastruktur bei gleichzeitiger Entlastung Ihrer Administratoren. Behalten Sie stets Risiken, Abhängigkeiten und kritische Ressourcen innerhalb Ihrer Infrastruktur im Blick.'
 
   keyfact1: 'Data-Driven Analytics'
   keyfactDescription1: 'Verschiedene Szenarien können anhand der individuellen Leistungsparameter eines Servers bedarfsgerecht überwacht werden.'
