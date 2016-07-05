@@ -27,14 +27,45 @@ signUp:
   submit: 'Create account'
   login: 'Portal Login'
   terms: 'By clicking “Create account“, you agree to our terms of service and privacy policy. We will occasionally send you account related emails.'
+  
+signUp2:
+  title: 'Account Informations'
+  firstname: 'Firstname'
+  lastname: 'Lastname'
+  newPassword: 'New password''
+  newPassword2: 'Repeat password'
+  continue: 'Continue'
+  back: 'Back'
+  checkPassword: 'Passwords do not match!'
+  checkField: 'Please fill out this field!'
+  checkZip: 'Please use the right format!'
+  address: 'Adress'
+  street: 'Street'
+  city: 'City'
+  postalCode: 'Zip Code'
+  land: 'Land'
+  phone: 'Phone'
+  titleOrga: 'Organization'
+  orga: 'Name of organization'
+  numEmployees: 'Number of employees'
+  thanks: 'Thank you!'
+  thanksText: 'Click \ "Finish \" to complete your registration'
+  finish: 'Finish'
+  
+success:
+  successHero: 'Your account has been successfully created!'
+  successDescription: 'We have sent you an email with a confirmation link. Please click on this link to complete your registration.'
+  successText: 'Do you have questions? Contact us anytime!'
+  successRegHero: 'Thank you for your registration!'
+  successRegDescription: 'Currently, we are still in an intensive test phase. We will inform you as soon as possible, when Enginsight is ready for use. '
 
 index:
-  hero:
-    primary: 'Sign up for closed Beta'
-    slogan: 'Intelligent and autonomous server monitoring for your business'
+  hero: 'Data-Driven Monitoring'
+  primary: 'Sign up for closed Beta'
+  slogan: 'Intelligent and autonomous server monitoring for your business'
 
-  hero2: 'Data-Driven Monitoring'
-  description: 'Enginsight is an independent learning server monitoring tool. It determines the normal behavior of your servers and alerts you to atypical behavior patterns.'
+  hero2: 'Next generation Server Monitoring'
+  description: 'With Enginsight you get a high quality monitoring of your server infrastructure with less work for your administrators. Keep always risks, dependencies and critical resources of your infrastructure in scope.'
 
   keyfact1: 'Data-Driven Analytics'
   keyfactDescription1: 'To capture specific scenarios for each server the monitoring is based on learned input parameters.'
